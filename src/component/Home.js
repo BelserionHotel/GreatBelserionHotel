@@ -8,27 +8,49 @@ export default function Home() {
     <div>
       <Jumbotron fluid className="jumbotron">
         <Container>
+          <br />
+          <br />
+
           <img
             style={{
               display: "block",
               marginLeft: "auto",
-              marginRight: "auto"
+              marginRight: "auto",
+              maxWidth: "100%",
+              height: "auto"
             }}
             src={jcover1}
             alt="cover jumbotron 1"
           />
-          <h1
-            className="text-center"
-            style={{ color: "white", fontSize: "100px" }}
+          <br />
+          <br />
+          <p
+            className="text-center jtext"
+            style={{
+              color: "white",
+              fontSize: "100px",
+              fontFamily: "Playfair Display",
+              lineHeight: "90px",
+              verticalAlign: "baseline",
+              letterSpacing: "5px",
+              wordSpacing: "0",
+              fontWeight: "700"
+            }}
           >
             Belserion Hotel
-          </h1>
+          </p>
+
           <h1
             className="text-center"
-            style={{ color: "white", fontSize: "50px" }}
+            style={{
+              color: "white",
+              fontSize: "50px"
+            }}
           >
             Luxury Resort & Spa
           </h1>
+          <br />
+          <br />
           <img
             style={{
               display: "block",
