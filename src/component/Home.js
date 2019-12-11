@@ -66,13 +66,16 @@ export default function Home() {
       <Container>
         <Row className="cont">
           <Col xs="12" lg="3">
-            <div className="cinhome">Check-In</div>
+            <div className="makehome">Make Reservation</div>
+            {/* <div className="cinhome">Check-In</div> */}
           </Col>
           <Col xs="12" lg="3">
-            <div className="couthome">Check-Out</div>
+            <div className="makehome">Make Reservation</div>
+            {/* <div className="couthome">Check-Out</div> */}
           </Col>
           <Col xs="12" lg="3">
-            <div className="guesthome">Guest</div>
+            <div className="makehome">Make Reservation</div>
+            {/* <div className="guesthome">Guest</div> */}
           </Col>
           <Col xs="12" lg="3">
             <div className="makehome">Make Reservation</div>
