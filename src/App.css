@@ -47,7 +47,6 @@ h1 {
   height: 100px;
   font-size: 17px;
   padding: 11px;
-  transition: 0.5s;
 }
 .couthome {
   background-color: black;
@@ -59,7 +58,6 @@ h1 {
   height: 100px;
   font-size: 17px;
   padding: 11px;
-  transition: 0.5s;
 }
 
 .guesthome {
@@ -72,7 +70,6 @@ h1 {
   height: 100px;
   font-size: 17px;
   padding: 11px;
-  transition: 0.5s;
 }
 .makehome {
   background-color: #e2c285;
@@ -85,7 +82,7 @@ h1 {
   font-size: 17px;
   font-weight: 1000;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .makehome:hover {
   background-color: black;
@@ -95,10 +92,27 @@ h1 {
 .sbn:hover {
   background-color: black !important;
 }
+
+/* .grid1-1 {
+  background-image: url(./assets/img1.jpg);
+  height: 1000px;
+
+  background-size: cover;
+} */
+
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 992px) {
   .jtext {
     font-size: 100px;
+  }
+  .cinhome {
+    transition: 0.5s;
+  }
+  .couthome {
+    transition: 0.5s;
+  }
+  .guesthome {
+    transition: 0.5s;
   }
   .couthome:hover {
     margin-top: 10px !important;
