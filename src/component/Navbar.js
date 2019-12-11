@@ -1,16 +1,22 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import "../App.css";
 
 function Navbarr() {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        // style={{ backgroundColor: "black" }}
+        variant="dark"
+        className="navbar"
+      >
         <Container
         // style={{ marginLeft: "50px", marginRight: "50px" }}
         >
-          <Navbar.Brand style={{ fontSize: "32px" }}>Beslerion</Navbar.Brand>
+          <Navbar.Brand className="navbrand">Belserion</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
@@ -35,11 +41,7 @@ function Navbarr() {
                   Services
                 </Link>
               </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px" }}>
-                <Link to="/news" className="link">
-                  News
-                </Link>
-              </Nav.Link>
+
               <Nav.Link style={{ marginLeft: "15px" }}>
                 <Link to="/gallery" className="link">
                   Gallery
@@ -50,8 +52,10 @@ function Navbarr() {
                   Contact
                 </Link>
               </Nav.Link>
+              <Button variant="outline-warning" style={{ marginLeft: "10px" }}>
+                <Link style={{ color: "#e08f0b" }}>Signin</Link>
+              </Button>
             </Nav>
-            <Nav></Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

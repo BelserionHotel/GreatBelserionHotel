@@ -1,7 +1,7 @@
-.navbar {
+.navbar,
+nav-link {
   position: relative;
   z-index: 1;
-  opacity: transparent;
 }
 
 .jumbotron {
@@ -26,28 +26,33 @@ h1 {
   position: absolute;
   bottom: 0;
 }
+/* .nav-link {
+  text-transform: uppercase;
+  font-size: 15px !important;
 
+  font-family: "Abril Fatface", cursive;
+} */
+.navbrand {
+  font-size: 32px;
+  font-family: "Abril Fatface", cursive;
+}
+
+.link {
+  color: white !important;
+  text-decoration: none !important;
+}
+.link:hover {
+  color: #e08f0b !important;
+}
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 992px) {
   .jtext {
     font-size: 100px;
   }
-  .nav-link {
-    text-transform: uppercase;
-    font-size: 15px !important;
-  }
-
-  .link {
-    color: white !important;
-    text-decoration: none !important;
-  }
-  .link:hover {
-    color: #e08f0b !important;
-  }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991px) {
   .jtext {
     font-size: 55px !important;
     letter-spacing: 0 !important;
@@ -55,4 +60,11 @@ h1 {
     vertical-align: baseline;
     letter-spacing: 5px;
   }
+  .navbar {
+    /* height: 60px; */
+    background-color: #e08f0b;
+  }
+  /* .navbar-toggler:hover {
+  
+  } */
 }

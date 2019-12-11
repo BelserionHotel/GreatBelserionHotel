@@ -8,8 +8,7 @@ import {
   Rooms,
   Services,
   Contact,
-  Gallery,
-  News
+  Gallery
 } from "./component";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/" exact="true">
+        <Route path="//" exact="true">
           <Home />
         </Route>
         <Route path="/about">
@@ -29,9 +28,7 @@ function App() {
         <Route path="/services">
           <Services />
         </Route>
-        <Route path="/news">
-          <News />
-        </Route>
+
         <Route path="/gallery">
           <Gallery />
         </Route>
