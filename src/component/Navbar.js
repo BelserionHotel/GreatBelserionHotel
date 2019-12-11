@@ -19,41 +19,47 @@ function Navbarr() {
           <Navbar.Brand className="navbrand">Belserion</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link style={{ marginLeft: "15px" }}>
+            <Nav className="ml-auto navres">
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/" className="link">
                   Home
                 </Link>
               </Nav.Link>
 
-              <Nav.Link style={{ marginLeft: "15px" }}>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/about" className="link">
                   About
                 </Link>
               </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px" }}>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/rooms" className="link">
                   Rooms
                 </Link>
               </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px" }}>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/services" className="link">
                   Services
                 </Link>
               </Nav.Link>
 
-              <Nav.Link style={{ marginLeft: "15px" }}>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/gallery" className="link">
                   Gallery
                 </Link>
               </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px" }}>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/contact" className="link">
                   Contact
                 </Link>
               </Nav.Link>
-              <Button variant="outline-warning" style={{ marginLeft: "10px" }}>
-                <Link style={{ color: "#e08f0b" }}>Signin</Link>
+              <Button
+                className="sbn"
+                variant="outline-light"
+                style={{ marginLeft: "10px", marginRight: "10px" }}
+              >
+                <Link className="signinbuttonnavbar" style={{ color: "white" }}>
+                  Signin
+                </Link>
               </Button>
             </Nav>
           </Navbar.Collapse>

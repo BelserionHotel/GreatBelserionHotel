@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Container } from "react-bootstrap";
+import { Jumbotron, Container, Row, Col } from "react-bootstrap";
 import "../App.css";
 import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
@@ -62,6 +62,34 @@ export default function Home() {
           />
         </Container>
       </Jumbotron>
+
+      <Container>
+        <Row className="cont">
+          <Col xs="12" lg="3">
+            <div className="cinhome">Check-In</div>
+          </Col>
+          <Col xs="12" lg="3">
+            <div className="couthome">Check-Out</div>
+          </Col>
+          <Col xs="12" lg="3">
+            <div className="guesthome">Guest</div>
+          </Col>
+          <Col xs="12" lg="3">
+            <div className="makehome">Make Reservation</div>
+          </Col>
+        </Row>
+      </Container>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
