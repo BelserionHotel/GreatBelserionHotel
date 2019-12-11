@@ -114,7 +114,7 @@ h1 {
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 991px) {
   .jumbotron {
-    height: 1200px;
+    height: 1300px;
   }
   .jtext {
     font-size: 55px !important;
