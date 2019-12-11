@@ -47,6 +47,7 @@ h1 {
   height: 100px;
   font-size: 17px;
   padding: 11px;
+  position: relative;
 }
 .couthome {
   background-color: black;
@@ -58,6 +59,7 @@ h1 {
   height: 100px;
   font-size: 17px;
   padding: 11px;
+  position: relative;
 }
 
 .guesthome {
@@ -70,6 +72,7 @@ h1 {
   height: 100px;
   font-size: 17px;
   padding: 11px;
+  position: relative;
 }
 .makehome {
   background-color: #e2c285;
