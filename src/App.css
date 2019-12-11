@@ -6,7 +6,7 @@
 .jumbotron {
   background: url(./assets/hotel2.jpg);
   background-size: cover;
-  height: 680px;
+  height: 800px;
   position: relative;
   margin-top: -75px;
   background-attachment: fixed;
@@ -31,18 +31,18 @@ h1 {
 }
 
 .cont {
-  margin-top: -180px;
+  margin-top: -280px;
   height: 10px;
   position: relative;
   text-transform: uppercase;
 }
 .cinhome {
   background-color: black;
-  /* opacity: 60%; */
+  opacity: 0.5;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border: 1px solid #e2c285;
   color: white;
-  width: 95%;
+  width: 100%;
   height: 100px;
   font-size: 17px;
   padding: 11px;
@@ -50,11 +50,11 @@ h1 {
 }
 .couthome {
   background-color: black;
-  /* opacity: 60%; */
+  opacity: 0.5;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border: 1px solid #e2c285;
   color: white;
-  width: 95%;
+  width: 100%;
   height: 100px;
   font-size: 17px;
   padding: 11px;
@@ -63,11 +63,11 @@ h1 {
 
 .guesthome {
   background-color: black;
-  /* opacity: 60%; */
+  opacity: 0.5;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border: 1px solid #e2c285;
   color: white;
-  width: 95%;
+  width: 100%;
   height: 100px;
   font-size: 17px;
   padding: 11px;
@@ -79,12 +79,12 @@ h1 {
   box-shadow: 0 9px 20px rgba(0, 0, 0, 0.5);
   border: 1px solid #e2c285;
   color: black;
-  width: 95%;
+  width: 100%;
   height: 100px;
   font-size: 17px;
   font-weight: 1000;
   text-align: center;
-  transition: 0.1s;
+  transition: 0.5s;
 }
 .makehome:hover {
   background-color: black;
@@ -150,7 +150,7 @@ h1 {
     text-transform: uppercase;
     font-size: 14px;
     background-color: black;
-    /* opacity: 96%; */
+    opacity: 0.9;
     border-radius: 10px;
     border: 1px solid #e2c285;
     position: relative;
@@ -170,4 +170,30 @@ h1 {
   .makehome {
     margin-top: 40px;
   }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 600px !important;
+    /* margin-top:0px; */
+  }
+  .img12 {
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #item1 {
+    grid-column: 1 / span 3 !important;
+  }
+  #item2 {
+    grid-column: 4 / span 3 !important;
+  }
+}
+
+.wrapper {
+  margin-top: 238px;
+  display: flex;
+  justify-content: space-around;
 }
