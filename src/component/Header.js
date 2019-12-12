@@ -57,7 +57,11 @@ function Navbarr() {
                 variant="outline-light"
                 style={{ marginLeft: "10px", marginRight: "10px" }}
               >
-                <Link className="signinbuttonnavbar" style={{ color: "white" }}>
+                <Link
+                  to="/signin"
+                  className="signinbuttonnavbar"
+                  style={{ color: "white" }}
+                >
                   Signin
                 </Link>
               </Button>

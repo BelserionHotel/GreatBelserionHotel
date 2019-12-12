@@ -109,7 +109,66 @@ export default function Home() {
         </Col>
       </Row> */}
 
-      <div className="wrapper text-center">
+      <div className="text-center wrap" style={{ marginTop: "238px" }}>
+        <Row style={{ width: "100%" }}>
+          <Col lg={8} md={12} sm={12}>
+            <Row>
+              <Col sm={12} md={6} lg={6} className="image1">
+                <img src={img1} alt="wkwkw" className="img12" id="item1" />
+              </Col>
+
+              <Col
+                sm={12}
+                md={6}
+                lg={6}
+                id="item2"
+                style={{
+                  backgroundColor: "black",
+                  color: " #e2c285",
+                  width: "100%",
+                  border: "1px solid #e2c285"
+                }}
+              >
+                <p
+                  style={{
+                    marginTop: "50px",
+                    fontFamily: "Playfair Display",
+                    fontSize: "35px"
+                  }}
+                >
+                  Great Services
+                </p>
+                <img src={jcover2} alt="wkwk" />
+                <p style={{ marginTop: "30px" }}>
+                  <span
+                    style={{
+                      color: "#blaca3",
+                      position: "relative",
+                      display: "inline-block",
+                      width: "70%"
+                    }}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magni praesentium nobis ratione molestias eligendi repellat
+                    qui eius cumque ipsam maxime voluptate pariatur ducimus,
+                    iure iusto ipsa, dolores at quas quis?
+                  </span>
+                </p>
+                <Button
+                  style={{ marginTop: "30px", marginBottom: "50px" }}
+                  variant="outline-light"
+                >
+                  learn more
+                </Button>
+              </Col>
+            </Row>
+          </Col>
+          <Col lg={4} md={12} sm={12} className="image1">
+            <img src={img2} alt="wkwkw" className="img12" />
+          </Col>
+        </Row>
+      </div>
+      {/* <div className="wrapper text-center">
         <img src={img1} alt="wkwkw" className="img12" id="item1" />
         <div
           id="item2"
@@ -153,7 +212,7 @@ export default function Home() {
           </Button>
         </div>
         <img src={img2} alt="wkwkw" className="img12" />
-      </div>
+      </div> */}
     </div>
   );
 }

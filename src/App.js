@@ -2,19 +2,21 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
-  Navbar,
+  Header,
   Home,
   About,
   Rooms,
   Services,
   Contact,
-  Gallery
+  Gallery,
+  Signin,
+  Signup
 } from "./component";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <Switch>
         <Route path="/" exact="true">
           <Home />
@@ -34,6 +36,12 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/signin">
+          <Signin />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
       </Switch>
     </Router>
