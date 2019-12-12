@@ -110,17 +110,17 @@ export default function Home() {
       </Row> */}
 
       <div className="text-center wrap" style={{ marginTop: "238px" }}>
-        <Row style={{ width: "100%" }}>
-          <Col lg={8} md={12} sm={12}>
+        <Row>
+          <Col xl={8} lg={12} xs={12}>
             <Row>
-              <Col sm={12} md={6} lg={6} className="image1">
+              <Col xs={12} lg={6} xl={6} className="image1">
                 <img src={img1} alt="wkwkw" className="img12" id="item1" />
               </Col>
 
               <Col
-                sm={12}
-                md={6}
+                xs={12}
                 lg={6}
+                xl={6}
                 id="item2"
                 style={{
                   backgroundColor: "black",
@@ -163,8 +163,8 @@ export default function Home() {
               </Col>
             </Row>
           </Col>
-          <Col lg={4} md={12} sm={12} className="image1">
-            <img src={img2} alt="wkwkw" className="img12" />
+          <Col xl={4} lg={12} xs={12} className="image1">
+            <img src={img2} alt="wkwkw" className="img12 imm" />
           </Col>
         </Row>
       </div>
