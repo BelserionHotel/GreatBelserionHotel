@@ -5,12 +5,13 @@ import {
   Navbar,
   Home,
   About,
-  Rooms,
   Services,
   Contact,
   Gallery,
   News
 } from "./component";
+
+import Rooms from "./Pages/Rooms";
 
 function App() {
   return (
