@@ -1,10 +1,10 @@
 import React from "react";
-import { Jumbotron, Container, Row, Col, Form } from "react-bootstrap";
+import { Jumbotron, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "../App.css";
 import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
 import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
+import room1 from "../assets/room1.jpg";
 export default function Rooms() {
   return (
     <div className="about1">
@@ -59,7 +59,7 @@ export default function Rooms() {
       <Container style={{ backgroundColor: "white" }}>
         <Row
           style={{
-            height: "150px",
+            height: "120px",
             boxShadow: "0 13px 43px 0 rgba(37, 46, 89, 0.1)"
           }}
         >
@@ -70,7 +70,6 @@ export default function Rooms() {
             style={{
               backgroundColor: "white",
               marginTop: "25px",
-
               color: "#1e1e1e",
               fontFamily: "monserrat"
             }}
@@ -97,10 +96,11 @@ export default function Rooms() {
             xs={12}
             md={6}
             style={{
-              backgroundColor: "white",
-              marginTop: "25px"
+              marginTop: "0",
+              backgroundColor: "white"
             }}
           >
+            <br />
             GUEST
             <br />
             <Form.Group controlId="exampleForm.ControlSelect1">
@@ -117,7 +117,7 @@ export default function Rooms() {
             lg={3}
             xs={12}
             md={6}
-            style={{ backgroundColor: "#C99635", transition: "0.5s" }}
+            style={{ backgroundColor: "#C99635" }}
             className="booknow"
           >
             <p
@@ -139,7 +139,7 @@ export default function Rooms() {
         </Row>
       </Container>
 
-      <Container style={{ marginTop: "150px" }}>
+      <Container style={{ marginTop: "150px" }} className="listrom">
         <Row>
           <Col className="text-center">
             <p
@@ -157,12 +157,31 @@ export default function Rooms() {
                 fontSize: "50px",
                 color: "#cb9734",
                 fontFamily: "playfair display",
-                marginBottom: "50px"
+                marginBottom: "30px"
               }}
             >
               Best Room
             </p>
             <img src={jcover2} alt="wlwl"></img>
+          </Col>
+        </Row>
+        <Row style={{ backgroundColor: "white",boxShadow: "0 13px 43px 0 rgba(37, 46, 89, 0.1)"}} >
+          <Col lg={8}>
+            <img
+              src={room1}
+              alt="wkwk"
+              style={{ width: "100%", height: "500px" }}
+            />
+          </Col>
+          <Col lg={4} style={{ height: "500px" }}>
+            <p style={{ fontFamily: "monserrat", fontSize: "28px" }}>
+              Single Room
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <Button variant="outline-warning">Detail</Button>
           </Col>
         </Row>
       </Container>

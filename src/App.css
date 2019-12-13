@@ -206,7 +206,11 @@ h1 {
     grid-column: 4 / span 3 !important;
   }
 }
-
+@media screen and (max-width: 800px) {
+  .listrom {
+    margin-top: 400px !important;
+  }
+}
 .wrapper {
   margin-top: 238px;
   display: flex;
@@ -222,7 +226,14 @@ h1 {
   opacity: 0.9;
 }
 .date {
-  font-size: 36px;
+  font-size: 30px;
   font-family: playfair display;
   border: none !important;
+}
+.date1 {
+  font-size: 30px;
+  font-family: playfair display;
+  border: none !important;
+  background: transparent;
+  color: white;
 }
