@@ -1,72 +1,67 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Link, withRouter } from "react-router-dom";
+import "../App.css";
 
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Container from "react-bootstrap/Container";
-
-import Navbar from "./Navbar";
-
-import jcover1 from "../assets/jcover1.png";
-import jcover2 from "../assets/jcover2.png";
-
-export default function Header(props) {
+function Navbarr() {
   return (
-    <Fragment>
-      <Jumbotron fluid className="jumbotron">
+    <div>
+      <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
         <Container>
-          <br />
-          <br />
+          <Navbar.Brand className="navbrand">Belserion</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto navres">
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
+                <Link to="/" className="link">
+                  Home
+                </Link>
+              </Nav.Link>
 
-          <img
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-              maxWidth: "100%",
-              height: "auto"
-            }}
-            src={jcover1}
-            alt="cover jumbotron 1"
-          />
-          <br />
-          <br />
-          <p
-            className="text-center jtext"
-            style={{
-              color: "white",
-              fontSize: "100px",
-              fontFamily: "Playfair Display",
-              lineHeight: "90px",
-              verticalAlign: "baseline",
-              letterSpacing: "5px",
-              wordSpacing: "0",
-              fontWeight: "700"
-            }}
-          >
-            {props.jumbotronUpperText}
-          </p>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
+                <Link to="/about" className="link">
+                  About
+                </Link>
+              </Nav.Link>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
+                <Link to="/rooms" className="link">
+                  Rooms
+                </Link>
+              </Nav.Link>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
+                <Link to="/services" className="link">
+                  Services
+                </Link>
+              </Nav.Link>
 
-          <h1
-            className="text-center"
-            style={{
-              color: "white",
-              fontSize: "50px"
-            }}
-          >
-            {props.jumbotronLowerText}
-          </h1>
-          <br />
-          <br />
-          <img
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto"
-            }}
-            src={jcover2}
-            alt="cover jumbotron 1"
-          />
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
+                <Link to="/gallery" className="link">
+                  Gallery
+                </Link>
+              </Nav.Link>
+              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
+                <Link to="/contact" className="link">
+                  Contact
+                </Link>
+              </Nav.Link>
+              <Button
+                className="sbn"
+                variant="outline-light"
+                style={{ marginLeft: "10px", marginRight: "10px" }}
+              >
+                <Link
+                  to="/signin"
+                  className="signinbuttonnavbar"
+                  style={{ color: "white" }}
+                >
+                  Signin
+                </Link>
+              </Button>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
-      </Jumbotron>
-    </Fragment>
+      </Navbar>
+    </div>
   );
 }
+export default withRouter(Navbarr);
