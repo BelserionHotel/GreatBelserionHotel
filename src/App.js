@@ -12,7 +12,7 @@ import {
   Header
 } from "./component";
 
-import Rooms from "./Pages/Rooms";
+import Rooms from "./pages/Rooms";
 
 function App() {
   return (
