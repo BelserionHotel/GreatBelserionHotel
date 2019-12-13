@@ -1,22 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {
-  Navbar,
-  Home,
-  About,
-  Services,
-  Contact,
-  Gallery,
-  News
-} from "./component";
+import { Home, About, Services, Contact, Gallery, News } from "./component";
 
 import Rooms from "./Pages/Rooms";
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route path="/" exact={true}>
           <Home />
