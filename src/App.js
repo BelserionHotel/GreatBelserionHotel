@@ -9,15 +9,12 @@ import {
   Gallery,
   Signin,
   Signup,
-  Header
-} from "./component";
-
-import Rooms from "./pages/Rooms";
+  Rooms
+} from "./pages";
 
 function App() {
   return (
     <Router>
-      <Header />
       <Switch>
         <Route path="/" exact={true}>
           <Home />
