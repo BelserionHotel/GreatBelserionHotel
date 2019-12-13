@@ -1,5 +1,10 @@
 import React, { Fragment } from "react";
 
+import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+
+import Header from "../component/Header";
 import RoomCard from "../component/RoomCard";
 
 export default function Rooms() {
@@ -66,5 +71,10 @@ export default function Rooms() {
     return <RoomCard roomData={data} />;
   });
 
-  return <Fragment>{roomCards}</Fragment>;
+  return (
+    <Fragment>
+      <Header jumbotronUpperText="Room List" />
+      <Container>{roomCards}</Container>
+    </Fragment>
+  );
 }
