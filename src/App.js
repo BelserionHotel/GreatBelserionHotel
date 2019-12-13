@@ -1,6 +1,6 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   Home,
   About,
@@ -10,38 +10,38 @@ import {
   Signin,
   Signup,
   Header
-} from './component';
+} from "./component";
 
-import Rooms from './Pages/Rooms';
+import Rooms from "./Pages/Rooms";
 
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        <Route path='/' exact={true}>
+        <Route path="/" exact={true}>
           <Home />
         </Route>
-        <Route path='/about'>
+        <Route path="/about">
           <About />
         </Route>
-        <Route path='/rooms'>
+        <Route path="/rooms">
           <Rooms />
         </Route>
-        <Route path='/services'>
+        <Route path="/services">
           <Services />
         </Route>
 
-        <Route path='/gallery'>
+        <Route path="/gallery">
           <Gallery />
         </Route>
-        <Route path='/contact'>
+        <Route path="/contact">
           <Contact />
         </Route>
-        <Route path='/signin'>
+        <Route path="/signin">
           <Signin />
         </Route>
-        <Route path='/signup'>
+        <Route path="/signup">
           <Signup />
         </Route>
       </Switch>

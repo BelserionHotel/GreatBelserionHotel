@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 export default function RoomCard(props) {
+  console.log(props);
   return (
     <Fragment>
       <Row className="room-card">
