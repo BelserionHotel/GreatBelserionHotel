@@ -131,6 +131,7 @@ export default function About() {
               fontFamily: "Open Sans Condensed ",
               fontSize: "28px"
             }}
+            className="textabout"
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
