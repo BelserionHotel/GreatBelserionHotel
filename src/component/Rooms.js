@@ -165,25 +165,6 @@ export default function Rooms() {
             <img src={jcover2} alt="wlwl"></img>
           </Col>
         </Row>
-        <Row style={{ backgroundColor: "white",boxShadow: "0 13px 43px 0 rgba(37, 46, 89, 0.1)"}} >
-          <Col lg={8}>
-            <img
-              src={room1}
-              alt="wkwk"
-              style={{ width: "100%", height: "500px" }}
-            />
-          </Col>
-          <Col lg={4} style={{ height: "500px" }}>
-            <p style={{ fontFamily: "monserrat", fontSize: "28px" }}>
-              Single Room
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <Button variant="outline-warning">Detail</Button>
-          </Col>
-        </Row>
       </Container>
     </div>
   );
