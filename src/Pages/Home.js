@@ -1,110 +1,22 @@
-import React from "react";
-import { Jumbotron, Container, Row, Col, Button, Form } from "react-bootstrap";
+import React, { Fragment } from "react";
+import { Row, Col, Button } from "react-bootstrap";
 import "../App.css";
 import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
+
+import { Header, DatePanelBlack } from "../component";
+
 export default function Home() {
   return (
-    <div>
-      <Jumbotron fluid className="jumbotron">
-        <Container>
-          <br />
-          <br />
-
-          <img
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-              maxWidth: "100%",
-              height: "auto"
-            }}
-            src={jcover1}
-            alt="cover jumbotron 1"
-          />
-          <br />
-          <br />
-          <p
-            className="text-center jtext"
-            style={{
-              color: "white",
-              fontSize: "100px",
-              fontFamily: "Playfair Display",
-              lineHeight: "90px",
-              verticalAlign: "baseline",
-              letterSpacing: "5px",
-              wordSpacing: "0",
-              fontWeight: "700"
-            }}
-          >
-            Belserion Hotel
-          </p>
-
-          <h1
-            className="text-center"
-            style={{
-              color: "white",
-              fontSize: "50px"
-            }}
-          >
-            Luxury Resort & Spa
-          </h1>
-          <br />
-          <br />
-          <img
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto"
-            }}
-            src={jcover2}
-            alt="cover jumbotron 1"
-          />
-        </Container>
-      </Jumbotron>
-
-      <Container>
-        <Row className="cont">
-          <Col xs="12" lg="3">
-            <div className="cinhome">
-              Check-In
-              <br />
-              <input type="date" className="date1"></input>
-            </div>
-          </Col>
-          <Col xs="12" lg="3">
-            <div className="couthome">
-              Check-Out
-              <br />
-              <input type="date" className="date1"></input>
-            </div>
-          </Col>
-          <Col xs="12" lg="3">
-            <div className="guesthome">
-              Guest
-              <br />
-              <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Control as="select" className="date1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Form.Control>
-              </Form.Group>
-            </div>
-          </Col>
-          <Col xs="12" lg="3">
-            <div className="makehome">
-              {" "}
-              <br style={{ lineHeight: "40px" }} />
-              Make A Reservation
-            </div>
-          </Col>
-        </Row>
-      </Container>
+    <Fragment>
+      <Header
+        jumbotronTitle="Belserion Hotel"
+        jumbotronSubtitle="Luxury Resort &amp; Spa"
+      >
+        <DatePanelBlack />
+      </Header>
 
       <div className="text-center wrap" style={{ marginTop: "238px" }}>
         <Row>
@@ -165,6 +77,6 @@ export default function Home() {
           </Col>
         </Row>
       </div>
-    </div>
+    </Fragment>
   );
 }
