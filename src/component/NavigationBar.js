@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import "../App.css";
 
-function Navbarr() {
+function NavigationBar() {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
@@ -64,4 +64,4 @@ function Navbarr() {
     </div>
   );
 }
-export default withRouter(Navbarr);
+export default withRouter(NavigationBar);
