@@ -15,4 +15,4 @@ export const loginValidation = async values => {
     } catch (err) {
         throw err;
     }
-};
+} ;
