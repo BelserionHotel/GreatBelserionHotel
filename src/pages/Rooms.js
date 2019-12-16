@@ -127,7 +127,11 @@ export default function Rooms() {
               GUEST
               <br />
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Control as="select" className="date">
+                <Form.Control
+                  as="select"
+                  className="date"
+                  style={{ backgroundColor: "white" }}
+                >
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -149,7 +153,7 @@ export default function Rooms() {
                   // backgroundColor: "#C99635",
                   textTransform: "uppercase",
                   textAlign: "center",
-                  marginTop: "56px",
+                  marginTop: "50px",
                   color: "#ffffff",
                   fontFamily: "Monserrat",
                   fontWeight: "700",
