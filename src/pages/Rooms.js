@@ -92,14 +92,18 @@ export default function Rooms() {
               md={6}
               style={{
                 backgroundColor: "white",
-                marginTop: "25px",
+                marginTop: "20px",
                 color: "#1e1e1e",
                 fontFamily: "monserrat"
               }}
             >
               CHECK-IN
               <br />
-              <input type="date" className="date"></input>
+              <input
+                type="date"
+                className="date"
+                style={{ backgroundColor: "white" }}
+              ></input>
             </Col>
             <Col
               lg={3}
@@ -107,12 +111,16 @@ export default function Rooms() {
               md={6}
               style={{
                 backgroundColor: "white",
-                marginTop: "25px"
+                marginTop: "20px"
               }}
             >
               CHECK-OUT
               <br />
-              <input type="date" className="date"></input>
+              <input
+                type="date"
+                className="date"
+                style={{ backgroundColor: "white" }}
+              ></input>
             </Col>
             <Col
               lg={3}
@@ -153,7 +161,7 @@ export default function Rooms() {
                   // backgroundColor: "#C99635",
                   textTransform: "uppercase",
                   textAlign: "center",
-                  marginTop: "50px",
+                  marginTop: "45px",
                   color: "#ffffff",
                   fontFamily: "Monserrat",
                   fontWeight: "700",
