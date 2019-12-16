@@ -12,8 +12,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Formik, ErrorMessage } from "formik";
-import { loginValidation } from "./validate";
-import { axios } from "./helpers";
+import { axios } from "../component/helpers";
+import { loginValidation } from "../component/validate";
 
 function Copyright() {
     return (

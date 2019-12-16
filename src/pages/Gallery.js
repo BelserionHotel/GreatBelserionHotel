@@ -1,9 +1,10 @@
 import React from "react";
+import { Footer } from "../component";
 
 export default function Gallery() {
   return (
     <div>
-      <p>ini Galery</p>
+      <Footer />
     </div>
   );
 }

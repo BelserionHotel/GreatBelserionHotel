@@ -96,16 +96,112 @@ h1 {
   background-color: black !important;
 }
 
+/* RoomCard */
+.room-card {
+  box-shadow: 0 13px 43px 0 rgba(37, 46, 89, 0.1);
+  background: white;
+  margin: 20px 0;
+}
+
+.room-thumbnail {
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+}
+.room-info {
+  margin: 2.5rem auto;
+}
+
+.room-info p:nth-child(1) {
+  font-size: 25px;
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  line-height: -0.5px;
+  color: #222222;
+}
+
+.room-info p:nth-child(2) {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: "Open Sans", sans-serif;
+  color: #5f6060;
+}
+
+.room-info ul li {
+  line-height: 1.75;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.room-price-and-book {
+  border-left: 1px solid #ededed;
+  margin: 2.5rem auto;
+}
+
+.room-price-and-book p:nth-child(1) {
+  color: #5f6060;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.room-price-and-book p:nth-child(2) {
+  color: #222;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  font-size: 1.875rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.room-price-and-book p:nth-child(2) span {
+  font-size: 50%;
+  color: #5f6060;
+}
+
+.room-price-and-book button {
+  display: block;
+  background: #c1b086;
+  color: #fff;
+  border: 1px solid;
+  border-color: #c1b086;
+  border-radius: 1.875rem;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 1.5835em 3.333em;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 1rem auto;
+  width: 12rem;
+}
+
+.room-price-and-book button:nth-child(4) {
+  color: #5f6060;
+  background: none;
+}
+
+.room-price-and-book button:hover {
+  cursor: pointer;
+  text-decoration: none;
+  border-color: #252e59;
+  background: #252e59;
+  color: #fff;
+}
+
 .image1 {
+  padding: 0;
+  background-size: cover;
+  object-fit: cover;
+}
+.image2 {
   padding: 0;
 }
 
-/* .grid1-1 {
-  background-image: url(./assets/img1.jpg);
-  height: 1000px;
-
-  background-size: cover;
-} */
+.form-control {
+  background-color: #f9f9f9;
+}
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 992px) {
@@ -134,8 +230,33 @@ h1 {
     width: 100%;
     height: 100%;
   }
+  .image2 img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
 }
 
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .image2 img {
+    visibility: hidden;
+    height: 1px;
+  }
+  .bawah {
+    margin-top: -100px !important;
+  }
+}
+@media screen and (max-width: 460px) {
+  .image2 img {
+    height: 461px !important;
+  }
+  .image1 img {
+    height: 461px !important;
+  }
+  .bawah {
+    margin-top: -100px;
+  }
+}
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 991px) {
   .textabout {
@@ -206,7 +327,11 @@ h1 {
     grid-column: 4 / span 3 !important;
   }
 }
-
+@media screen and (max-width: 800px) {
+  .listrom {
+    margin-top: 400px !important;
+  }
+}
 .wrapper {
   margin-top: 238px;
   display: flex;
@@ -214,7 +339,7 @@ h1 {
 }
 .about1 {
   background: url(../src/assets/bg.jpg);
-  height: 3000px;
+  background-repeat: repeat;
   margin-top: -30px !important;
 }
 .booknow:hover {
@@ -222,7 +347,27 @@ h1 {
   opacity: 0.9;
 }
 .date {
-  font-size: 36px;
+  font-size: 30px;
   font-family: playfair display;
   border: none !important;
+}
+.date1 {
+  font-size: 30px;
+  font-family: playfair display;
+  border: none !important;
+  background: transparent;
+  color: white;
+}
+.imgco {
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+.nav-link {
+  color: #525252 !important;
+  font-size: 13px;
 }

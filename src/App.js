@@ -1,50 +1,62 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
-  Header,
   Home,
   About,
-  Rooms,
   Services,
   Contact,
   Gallery,
   Signin,
-  Signup
-} from "./component";
+  Signup,
+  Rooms,
+  Booking,
+  Checkout,
+  OrderDetail
+} from "./pages";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route path="/" exact="true">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/rooms">
-          <Rooms />
-        </Route>
-        <Route path="/services">
-          <Services />
-        </Route>
+    <Fragment>
+      <Router>
+        <Switch>
+          <Route path="/" exact={true}>
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/rooms">
+            <Rooms />
+          </Route>
+          <Route path="/services">
+            <Services />
+          </Route>
 
-        <Route path="/gallery">
-          <Gallery />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/signin">
-          <Signin />
-        </Route>
-        <Route path="/signup">
-          <Signup />
-        </Route>
-      </Switch>
-    </Router>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/signin">
+            <Signin />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/booking">
+            <Booking />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/orderdetail">
+            <OrderDetail />
+          </Route>
+        </Switch>
+      </Router>
+    </Fragment>
   );
 }
 
