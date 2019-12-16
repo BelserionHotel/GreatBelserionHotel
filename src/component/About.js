@@ -1,4 +1,6 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
+
 import { Jumbotron, Container, Row, Col, Button } from "react-bootstrap";
 import "../App.css";
 import jcover1 from "../assets/jcover1.png";
@@ -6,7 +8,9 @@ import jcover2 from "../assets/jcover2.png";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 export default function About() {
+  const token = JSON.parse(localStorage.getItem("token"));
   return (
+<React.Fragment>{token ?
     <div className="about1">
       <Jumbotron fluid className="jumbotron" style={{ height: "590px" }}>
         <Container>
@@ -141,7 +145,8 @@ export default function About() {
             culpa qui officia deserunt mollit anim id est laborum.
           </Col>
         </Row>
-      </Container>
-    </div>
+      </Container> 
+    </div>: <Redirect to="/signin" />}
+    </React.Fragment>
   );
 }

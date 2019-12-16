@@ -77,6 +77,8 @@ function Signin(props) {
                             .post(`/user/login`, values)
                             .then(response => {
                                 if (response.status === 200) {
+                                    console.log(response);
+                                    
                                     localStorage.setItem(
                                         "token",
                                         JSON.stringify(response.data.data)
