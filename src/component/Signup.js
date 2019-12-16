@@ -100,19 +100,19 @@ function Signup(props) {
                             onSubmit={handleSubmit}
                         >
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6}>
+                                <Grid item xs={12}>
                                     <TextField
-                                        autoComplete="fname"
-                                        name="firstName"
+                                        autoComplete="uname"
+                                        name="username"
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        id="firstName"
-                                        label="First Name"
+                                        id="username"
+                                        label="User Name"
                                         autoFocus
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        defaultValue={values.firstName}
+                                        defaultValue={values.username}
                                     />
                                     <p
                                         style={{
@@ -120,31 +120,10 @@ function Signup(props) {
                                             fontStyle: "italic"
                                         }}
                                     >
-                                        <ErrorMessage name="firstName" />
+                                        <ErrorMessage name="username" />
                                     </p>
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="lastName"
-                                        label="Last Name"
-                                        name="lastName"
-                                        autoComplete="lname"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        defaultValue={values.lastName}
-                                    />
-                                    <p
-                                        style={{
-                                            color: "red",
-                                            fontStyle: "italic"
-                                        }}
-                                    >
-                                        <ErrorMessage name="lastName" />
-                                    </p>
-                                </Grid>
+                               
                                 <Grid item xs={12}>
                                     <TextField
                                         variant="outlined"

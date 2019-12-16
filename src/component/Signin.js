@@ -83,7 +83,11 @@ function Signin(props) {
                                     );
                                     props.history.push("/");
                                 }
-                            });
+                            }).catch(error=>{
+                                console.log(error);
+                                alert("masdflaksdf")
+                                
+                            })
                     }}
                 >
                     {({
