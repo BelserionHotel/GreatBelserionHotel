@@ -28,6 +28,7 @@ function Copyright() {
     );
 }
 
+<<<<<<< HEAD:src/component/Signin.js
 const useStyles = makeStyles(theme => ({
     "@global": {
         body: {
@@ -172,6 +173,17 @@ function Signin(props) {
                         </form>
                     )}
                 </Formik>
+=======
+            <div className="input-group">
+              <button>Login</button>
+            </div>
+            <div className="switch-login">
+              <a href="/">
+                Already have an account ? <span>SignUp</span>
+              </a>
+              <br />
+              <br />
+>>>>>>> rizkian:src/pages/Signin.js
             </div>
             <Box mt={8}>
                 <Copyright />

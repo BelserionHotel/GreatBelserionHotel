@@ -3,19 +3,11 @@ import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import "../App.css";
 
-function Navbarr() {
+function NavigationBar() {
   return (
     <div>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        // style={{ backgroundColor: "black" }}
-        variant="dark"
-        className="navbar"
-      >
-        <Container
-        // style={{ marginLeft: "50px", marginRight: "50px" }}
-        >
+      <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
+        <Container>
           <Navbar.Brand className="navbrand">Belserion</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -72,4 +64,4 @@ function Navbarr() {
     </div>
   );
 }
-export default withRouter(Navbarr);
+export default withRouter(NavigationBar);
