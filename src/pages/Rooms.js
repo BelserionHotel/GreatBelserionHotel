@@ -93,8 +93,7 @@ export default function Rooms() {
               style={{
                 backgroundColor: "white",
                 marginTop: "20px",
-                color: "#1e1e1e",
-                fontFamily: "monserrat"
+                color: "black"
               }}
             >
               CHECK-IN
@@ -111,6 +110,7 @@ export default function Rooms() {
               md={6}
               style={{
                 backgroundColor: "white",
+                color: "black",
                 marginTop: "20px"
               }}
             >
@@ -128,7 +128,8 @@ export default function Rooms() {
               md={6}
               style={{
                 marginTop: "0",
-                backgroundColor: "white"
+                backgroundColor: "white",
+                color: "black"
               }}
             >
               <br />

@@ -348,6 +348,7 @@ h1 {
 }
 .date {
   font-size: 30px;
+  color: black;
   font-family: playfair display;
   border: none !important;
 }
