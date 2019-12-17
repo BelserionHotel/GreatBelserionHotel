@@ -4,6 +4,7 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import { Formik, ErrorMessage } from "formik";
+import { validationForm } from "../component/validate";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -14,8 +15,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { axios } from "../component/helpers";
-import { validationForm } from "../component/validate";
+import { axios } from "../component/helpers"
 
 const useStyles = makeStyles(theme => ({
     "@global": {
@@ -103,19 +103,19 @@ function Signup(props) {
                             onSubmit={handleSubmit}
                         >
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm={6}>
+                                <Grid item xs={12}>
                                     <TextField
-                                        autoComplete="fname"
-                                        name="firstName"
+                                        autoComplete="uname"
+                                        name="username"
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        id="firstName"
-                                        label="First Name"
+                                        id="username"
+                                        label="User Name"
                                         autoFocus
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        defaultValue={values.firstName}
+                                        defaultValue={values.username}
                                     />
                                     <p
                                         style={{
@@ -123,31 +123,10 @@ function Signup(props) {
                                             fontStyle: "italic"
                                         }}
                                     >
-                                        <ErrorMessage name="firstName" />
+                                        <ErrorMessage name="username" />
                                     </p>
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="lastName"
-                                        label="Last Name"
-                                        name="lastName"
-                                        autoComplete="lname"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        defaultValue={values.lastName}
-                                    />
-                                    <p
-                                        style={{
-                                            color: "red",
-                                            fontStyle: "italic"
-                                        }}
-                                    >
-                                        <ErrorMessage name="lastName" />
-                                    </p>
-                                </Grid>
+                               
                                 <Grid item xs={12}>
                                     <TextField
                                         variant="outlined"
