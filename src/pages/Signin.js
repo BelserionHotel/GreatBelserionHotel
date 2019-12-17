@@ -12,8 +12,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Formik, ErrorMessage } from "formik";
-import { loginValidation } from "./validate";
-import { axios } from "./helpers";
+import { loginValidation } from "../component/validate";
+import { axios } from "../component/helpers";
 
 function Copyright() {
     return (
@@ -28,7 +28,6 @@ function Copyright() {
     );
 }
 
-<<<<<<< HEAD:src/component/Signin.js
 const useStyles = makeStyles(theme => ({
     "@global": {
         body: {
@@ -173,17 +172,6 @@ function Signin(props) {
                         </form>
                     )}
                 </Formik>
-=======
-            <div className="input-group">
-              <button>Login</button>
-            </div>
-            <div className="switch-login">
-              <a href="/">
-                Already have an account ? <span>SignUp</span>
-              </a>
-              <br />
-              <br />
->>>>>>> rizkian:src/pages/Signin.js
             </div>
             <Box mt={8}>
                 <Copyright />
