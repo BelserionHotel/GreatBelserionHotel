@@ -5,14 +5,20 @@ import Container from "react-bootstrap/Container";
 import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
 
-import { NavigationBar } from ".";
+import  NavigationBar  from "./NavigationBar";
+import  NavigationBarMember  from "./NavigationBarMember";
 
 export default function HeaderHome(props) {
   console.log(props);
 
   return (
     <Fragment>
-      <NavigationBar />
+       {JSON.parse(localStorage.getItem("token")) === null ? (
+                <NavigationBar />
+            ) : (
+                <NavigationBarMember />
+            )}
+      
       <Jumbotron fluid className="jumbotron">
         <Container>
           <br />
