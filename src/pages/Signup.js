@@ -81,7 +81,7 @@ function Signup(props) {
                         }
 
                         axios()
-                            .post(`/user`, values)
+                            .post(`/users`, values)
                             .then(response => {
                                 if (response.status === 201) {
                                     props.history.push("/signin");

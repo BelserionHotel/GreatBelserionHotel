@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter,  Redirect } from "react-router-dom";
 
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import "../App.css";
@@ -8,7 +8,10 @@ import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";
 
 function Booking() {
+  const token = JSON.parse(localStorage.getItem("token"));
+
   return (
+    <React.Fragment>{token ?
     <div>
       <HeaderAll jumbotronTitle="Booking"></HeaderAll>
       <Container>
@@ -298,7 +301,8 @@ function Booking() {
       <br />
       <br />
       <br />
-    </div>
+    </div>: <Redirect to="/signin" />}
+    </React.Fragment>
   );
 }
 export default withRouter(Booking);

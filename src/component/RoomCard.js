@@ -2,12 +2,14 @@ import React, { Fragment } from "react";
 // Photo by Olexandr Ignatov on Unsplash
 import { Link, withRouter } from "react-router-dom";
 
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
 function RoomCard(props) {
+
   return (
     <Fragment>
       <Container>
@@ -43,6 +45,7 @@ function RoomCard(props) {
                 <button>
                   <Link to="./booking">BOOK</Link>
                 </button>
+    
                 <button>VIEW DETAILS</button>
               </Col>
             </Row>

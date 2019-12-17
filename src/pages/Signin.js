@@ -74,7 +74,7 @@ function Signin(props) {
           validate={loginValidation}
           onSubmit={values => {
             axios()
-              .post(`/user/login`, values)
+              .post(`/users/login`, values)
               .then(response => {
                 if (response.status === 200) {
                   console.log(response);
