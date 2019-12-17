@@ -1,24 +1,23 @@
 import React, { Fragment } from "react";
+import { withRouter } from "react-router-dom";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 
 import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
 
-import  NavigationBar  from "./NavigationBar";
-import  NavigationBarMember  from "./NavigationBarMember";
+import NavigationBar from "./NavigationBar";
+import NavigationBarMember from "./NavigationBarMember";
 
-export default function HeaderHome(props) {
-  console.log(props);
-
+function HeaderHome(props) {
   return (
     <Fragment>
-       {JSON.parse(localStorage.getItem("token")) === null ? (
-                <NavigationBar />
-            ) : (
-                <NavigationBarMember />
-            )}
-      
+      {JSON.parse(localStorage.getItem("token")) === null ? (
+        <NavigationBar />
+      ) : (
+        <NavigationBarMember />
+      )}
+
       <Jumbotron fluid className="jumbotron">
         <Container>
           <br />
@@ -75,8 +74,10 @@ export default function HeaderHome(props) {
             alt="cover jumbotron 1"
           />
         </Container>
+        {props.children}
       </Jumbotron>
-      {props.children}
     </Fragment>
   );
 }
+
+export default withRouter(HeaderHome);

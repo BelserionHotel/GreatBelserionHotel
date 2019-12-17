@@ -2,7 +2,10 @@ import React, { Fragment } from "react";
 
 import { Container, Row, Col, Form } from "react-bootstrap";
 
-export default function DatePanelBlack() {
+import { withRouter } from "react-router-dom";
+
+function DatePanelBlack(props) {
+  console.log(props);
   return (
     <Fragment>
       <Container>
@@ -48,3 +51,5 @@ export default function DatePanelBlack() {
     </Fragment>
   );
 }
+
+export default withRouter(DatePanelBlack);
