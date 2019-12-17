@@ -1,3 +1,6 @@
+
+
+// export default withRouter(Signup);
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import { Formik, ErrorMessage } from "formik";
@@ -78,7 +81,7 @@ function Signup(props) {
                         }
 
                         axios()
-                            .post(`/user`, values)
+                            .post(`/users`, values)
                             .then(response => {
                                 if (response.status === 201) {
                                     props.history.push("/signin");

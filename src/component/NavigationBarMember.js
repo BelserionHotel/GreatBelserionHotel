@@ -5,8 +5,8 @@ import "../App.css";
 
 function NavigationBarMember() {
   const logOut = () => {
-        localStorage.removeItem("token")
-  }
+    localStorage.removeItem("token");
+  };
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
@@ -58,7 +58,7 @@ function NavigationBarMember() {
                   style={{ color: "white" }}
                   onClick={logOut}
                 >
-                 Loguot
+                  Logout
                 </Link>
               </Button>
             </Nav>
