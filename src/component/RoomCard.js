@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
 // Photo by Olexandr Ignatov on Unsplash
+import { Link, withRouter } from "react-router-dom";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
-export default function RoomCard(props) {
+function RoomCard(props) {
+  console.log(props);
   return (
     <Fragment>
       <Row className="room-card">
@@ -37,7 +39,9 @@ export default function RoomCard(props) {
               <p>
                 2,500,000 <span>IDR/night</span>
               </p>
-              <button>BOOK</button>
+              <button>
+                <Link to="./booking">BOOK</Link>
+              </button>
               <button>VIEW DETAILS</button>
             </Col>
           </Row>
@@ -46,3 +50,4 @@ export default function RoomCard(props) {
     </Fragment>
   );
 }
+export default withRouter(RoomCard);

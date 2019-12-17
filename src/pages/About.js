@@ -1,19 +1,17 @@
 import React, { Fragment } from "react";
-import { Jumbotron, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
-import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
-import { Header } from "../component";
+import { HeaderAll } from "../component";
 
 import img2 from "../assets/img2.jpg";
 export default function About() {
   return (
     <Fragment>
-      <Header jumbotronTitle="About Us" />
-
+      <HeaderAll jumbotronTitle="About" />
       <div className="about1">
         <Container>
-          <Row className="tex<t-center">
+          <Row className="text-center">
             <Col>
               <div>
                 <p
@@ -46,7 +44,7 @@ export default function About() {
                 style={{
                   color: "#5e6666",
                   fontFamily: "Open Sans Condensed ",
-                  fontSize: "28px"
+                  fontSize: "25px"
                 }}
                 className="textabout"
               >
@@ -85,7 +83,7 @@ export default function About() {
               style={{
                 color: "#5e6666",
                 fontFamily: "Open Sans Condensed ",
-                fontSize: "28px"
+                fontSize: "25px"
               }}
               className="textabout"
             >

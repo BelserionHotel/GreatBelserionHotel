@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { Jumbotron, Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Form } from "react-bootstrap";
 
 import { withRouter } from "react-router-dom";
 

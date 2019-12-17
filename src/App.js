@@ -9,7 +9,10 @@ import {
   Gallery,
   Signin,
   Signup,
-  Rooms
+  Rooms,
+  Booking,
+  Checkout,
+  OrderDetail
 } from "./pages";
 
 function App() {
@@ -41,6 +44,15 @@ function App() {
           </Route>
           <Route path="/signup">
             <Signup />
+          </Route>
+          <Route path="/booking">
+            <Booking />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/orderdetail">
+            <OrderDetail />
           </Route>
         </Switch>
       </Router>
