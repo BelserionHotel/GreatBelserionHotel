@@ -10,6 +10,7 @@ export default function About() {
   return (
     <Fragment>
       <Header jumbotronTitle="About Us" />
+
       <div className="about1">
         <Container>
           <Row className="tex<t-center">

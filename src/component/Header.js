@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { withRouter } from "react-router-dom";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 
@@ -7,13 +8,15 @@ import jcover2 from "../assets/jcover2.png";
 
 import { NavigationBar } from "./";
 
-export default function Header(props) {
-  console.log(props);
-
+function Header(props) {
   return (
     <Fragment>
       <NavigationBar />
-      <Jumbotron fluid className="jumbotron">
+      <Jumbotron
+        fluid
+        className="jumbotron"
+        style={{ height: props.match.path == "/" && "800px" }}
+      >
         <Container>
           <br />
           <br />
@@ -69,8 +72,10 @@ export default function Header(props) {
             alt="cover jumbotron 1"
           />
         </Container>
+        {props.children}
       </Jumbotron>
-      {props.children}
     </Fragment>
   );
 }
+
+export default withRouter(Header);
