@@ -13,7 +13,7 @@ import {
   Booking,
   Checkout,
   OrderDetail
-} from "./pages";
+} from "./Pages";
 
 function App() {
   return (
