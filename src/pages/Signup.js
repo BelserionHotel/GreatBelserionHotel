@@ -172,49 +172,6 @@ function Signup(props) {
                                         <ErrorMessage name="password" />
                                     </p>
                                 </Grid>
-                                <Grid item xs={6}>
-                                    <input
-                                        accept="/*"
-                                        id="contained-button-file"
-                                        type="file"
-                                        style={{ display: "none" }}
-                                        onChange={event => {
-                                            setFieldValue(
-                                                "image",
-                                                event.currentTarget.files[0]
-                                            );
-                                            handleImage(event);
-                                        }}
-                                    />
-                                    <label htmlFor="contained-button-file">
-                                        <Button
-                                            variant="contained"
-                                            color="primary"
-                                            component="span"
-                                        >
-                                            Upload
-                                        </Button>
-                                    </label>
-                                </Grid>
-                                <Grid item xs={6}>
-                                    {image && !type.type.includes("image") ? (
-                                        <video width="100%" controls>
-                                            <source
-                                                src={image}
-                                                type={image.type}
-                                            />
-                                            Your browser does not support HTML5
-                                            video.
-                                        </video>
-                                    ) : (
-                                        <img
-                                            width={image && "100%"}
-                                            src={image}
-                                            alt=""
-                                            id="preview-image"
-                                        />
-                                    )}
-                                </Grid>
                             </Grid>
                             <Button
                                 type="submit"
