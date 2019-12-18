@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-// Photo by Olexandr Ignatov on Unsplash
 import { Link, withRouter } from "react-router-dom";
 
 import Row from "react-bootstrap/Row";
@@ -8,13 +7,14 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
 function RoomCard(props) {
+    console.log(props.type)
     return (
         <Fragment>
             <Container>
                 <Row className="room-card">
                     <Col lg={4} md={12} className="room-thumbnail">
                         <Image
-                            src={require("../assets/hotel-room.jpg")}
+                            src={props.image}
                             alt="hotel-room"
                             fluid
                             rounded
@@ -23,15 +23,10 @@ function RoomCard(props) {
                     <Col lg={8} className="room-info-and-book">
                         <Row>
                             <Col lg={8} md={8} sm={12} className="room-info">
-                                <p>hai</p>
-                                <p>hai</p>
+                                <p>{props.type}</p>
+                                <p>{props.desc}</p>
                                 <ul>
-                                    <li>capacity: {props.capacity}</li>
-                                    <li>View: hai</li>
-                                    <li>Size: haim2</li>
-                                    <li>Bed Type: hai}</li>
-                                    <li>Categories:hai</li>
-                                    <li>Amenities: hai</li>
+                                    Capacity : {props.capacity}
                                 </ul>
                             </Col>
 
@@ -43,7 +38,7 @@ function RoomCard(props) {
                             >
                                 <p>Prices start at:</p>
                                 <p>
-                                    2,500,000 <span>IDR/night</span>
+                                    {props.price} <span>IDR/night</span>
                                 </p>
                                 <button>
                                     <Link to={`/booking/${props.id}`}>
@@ -51,25 +46,6 @@ function RoomCard(props) {
                                     </Link>
                                 </button>
 
-<<<<<<< HEAD
-              <Col lg={4} md={4} sm={12} className="room-price-and-book">
-                <p>Prices start at:</p>
-                <p>
-                  2,500,000 <span>IDR/night</span>
-                </p>
-                <button>
-                  <Link to="./booking">BOOK</Link>
-                </button>
-    
-              
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    </Fragment>
-  );
-=======
                                 <button>VIEW DETAILS</button>
                             </Col>
                         </Row>
@@ -78,6 +54,5 @@ function RoomCard(props) {
             </Container>
         </Fragment>
     );
->>>>>>> miftah
 }
 export default withRouter(RoomCard);
