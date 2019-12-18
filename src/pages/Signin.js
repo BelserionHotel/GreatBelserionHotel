@@ -77,8 +77,6 @@ function Signin(props) {
               .post(`/users/login`, values)
               .then(response => {
                 if (response.status === 200) {
-                  console.log(response);
-
                   localStorage.setItem(
                     "token",
                     JSON.stringify(response.data.data)
@@ -87,7 +85,6 @@ function Signin(props) {
                 }
               })
               .catch(error => {
-                console.log(error);
                 alert("email atau password salah");
               });
           }}
