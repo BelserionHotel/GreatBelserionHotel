@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 import {
   Home,
   About,
@@ -17,7 +19,7 @@ import {
 
 function App() {
   return (
-    <Fragment>
+    <Provider store={store}>
       <Router>
         <Switch>
           <Route path="/" exact={true}>
@@ -56,7 +58,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </Fragment>
+    </Provider>
   );
 }
 
