@@ -106,16 +106,16 @@ function Signup(props) {
                                 <Grid item xs={12}>
                                     <TextField
                                         autoComplete="uname"
-                                        name="username"
+                                        name="name"
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        id="username"
-                                        label="User Name"
+                                        id="name"
+                                        label="Name"
                                         autoFocus
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        defaultValue={values.username}
+                                        defaultValue={values.name}
                                     />
                                     <p
                                         style={{
@@ -123,7 +123,7 @@ function Signup(props) {
                                             fontStyle: "italic"
                                         }}
                                     >
-                                        <ErrorMessage name="username" />
+                                        <ErrorMessage name="name" />
                                     </p>
                                 </Grid>
                                

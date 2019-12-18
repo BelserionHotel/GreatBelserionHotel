@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { axios } from "./component/helpers";
+import { axios, verify } from "./component/helpers";
+
 
 
 export default class Tes extends Component {
@@ -11,6 +12,8 @@ export default class Tes extends Component {
                 
                 
             })
+            console.log(verify());
+            
            
     };
     render() {
