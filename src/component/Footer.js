@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Form, Tab, Tabs } from "react-bootstrap";
+import { Row, Col, Button, Form } from "react-bootstrap";
 
 export default function Footer() {
   return (

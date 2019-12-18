@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-import { Container, Row, Col, Button, Form, Tab, Tabs } from "react-bootstrap";
+import { Container, Row, Col, Button, Tab, Tabs } from "react-bootstrap";
 import "../App.css";
 import CreditCardInput from "react-credit-card-input";
 import co from "../assets/checkout.jpg";
