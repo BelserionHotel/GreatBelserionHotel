@@ -45,7 +45,7 @@ function App() {
           <Route path="/signup">
             <Signup />
           </Route>
-          <Route path="/booking">
+          <Route path="/booking/:id">
             <Booking />
           </Route>
           <Route path="/checkout">
