@@ -14,10 +14,13 @@ import {
   Checkout,
   OrderDetail
 } from "./pages";
+import Tes from './Tes';
 
 function App() {
   return (
+   
     <Fragment>
+       <Tes />
       <Router>
         <Switch>
           <Route path="/" exact={true}>

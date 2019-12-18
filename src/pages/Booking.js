@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, withRouter,  Redirect } from "react-router-dom";
-import Checkout from "./Checkout";
 
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import "../App.css";
@@ -187,8 +186,7 @@ function Booking() {
                 <Form style={{ color: "#7e7e7e", fontSize: "14px" }}>
                   <Form.Group controlId="formGroupEmail">
                     <Form.Label>Name *</Form.Label>
-                    <Checkout>                <Form.Control type="text" /></Checkout>
-
+                    <Form.Control type="text" />
                   </Form.Group>
                   <Form.Group controlId="formGroupPassword">
                     <Form.Label>Email *</Form.Label>
