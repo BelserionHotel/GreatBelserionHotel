@@ -17,11 +17,13 @@ function Booking(props) {
     const [userData, setUserData] = useState({});
 
     useEffect(() => {
-        axios()
-            .get(`/users/${verify().id}`)
-            .then(response => {
-                setUserData(response.data.data);
-            });
+        if (verify() !== undefined) {
+            axios()
+                .get(`/users/${verify().id}`)
+                .then(response => {
+                    setUserData(response.data.data);
+                });
+        }
     }, []);
 
     return (
@@ -525,7 +527,7 @@ function Booking(props) {
                     <br />
                 </div>
             ) : (
-                <Redirect to="/signin" />
+                <Redirect to={`/signin/${params.id}`} />
             )}
         </React.Fragment>
     );
