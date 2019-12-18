@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../main.css";
 import { withRouter, Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
@@ -14,6 +14,8 @@ import Container from "@material-ui/core/Container";
 import { Formik, ErrorMessage } from "formik";
 import { loginValidation } from "../component/validate";
 import { axios } from "../component/helpers";
+import { HeaderAll } from "../component";
+import { NavigationBar } from "../component";
 
 function Copyright() {
   return (
@@ -31,7 +33,7 @@ function Copyright() {
 const useStyles = makeStyles(theme => ({
   "@global": {
     body: {
-      backgroundColor: theme.palette.common.white
+      background: "#CAB07D"
     }
   },
   paper: {
@@ -55,9 +57,9 @@ const useStyles = makeStyles(theme => ({
 
 function Signin(props) {
   const classes = useStyles();
-
   return (
     <Container component="main" maxWidth="xs">
+      <NavigationBar />
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
