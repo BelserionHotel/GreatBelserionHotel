@@ -28,9 +28,6 @@ export default class Rooms extends Component {
     }
 
     render() {
-        const availableTypes = this.state.data.map({
-            
-        })
         return (
             <Fragment>
                 <HeaderAll jumbotronTitle="Rooms" />
