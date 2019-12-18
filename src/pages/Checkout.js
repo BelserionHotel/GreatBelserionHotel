@@ -7,7 +7,9 @@ import CreditCardInput from "react-credit-card-input";
 import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";
 
-function Checkout() {
+function Checkout(props) {
+  console.log(props);
+  
   return (
     <div>
       <HeaderAll jumbotronTitle="Check Out"></HeaderAll>

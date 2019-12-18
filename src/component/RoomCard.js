@@ -46,7 +46,7 @@ function RoomCard(props) {
                   <Link to="./booking">BOOK</Link>
                 </button>
     
-                <button>VIEW DETAILS</button>
+              
               </Col>
             </Row>
           </Col>

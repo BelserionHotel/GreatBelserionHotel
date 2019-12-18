@@ -76,8 +76,8 @@ function Signin(props) {
             axios()
               .post(`/users/login`, values)
               .then(response => {
-                if (response.status === 200) {
-                  console.log(response);
+                if (response.data.message === "Login successfull") {
+                  // console.log(response.data.message);
 
                   localStorage.setItem(
                     "token",
@@ -85,10 +85,15 @@ function Signin(props) {
                   );
                   props.history.push("/");
                 }
+                else if (response.data.message==="failed login") {
+                  // console.log(response.data.message);
+                  
+                  alert("email atau password salah");
+                }
               })
               .catch(error => {
                 console.log(error);
-                alert("email atau password salah");
+               
               });
           }}
         >
