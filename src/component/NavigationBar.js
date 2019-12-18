@@ -4,6 +4,41 @@ import { Link, withRouter } from "react-router-dom";
 import "../App.css";
 
 function NavigationBar() {
+  const logout = localStorage.removeItem("token");
+
+  const loginLinks = (
+    <Button
+      className="sbn"
+      variant="outline-light"
+      style={{ marginLeft: "10px", marginRight: "10px" }}
+    >
+      <Link
+        to="/signin"
+        className="signinbuttonnavbar"
+        style={{ color: "white" }}
+      >
+        Sign in
+      </Link>
+    </Button>
+  );
+
+  const logoutLinks = (
+    <Button
+      className="sbn"
+      variant="outline-light"
+      style={{ marginLeft: "10px", marginRight: "10px" }}
+    >
+      <Link
+        to="/signin"
+        className="signinbuttonnavbar"
+        style={{ color: "white" }}
+        onClick={logout}
+      >
+        Logout
+      </Link>
+    </Button>
+  );
+
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
@@ -44,19 +79,9 @@ function NavigationBar() {
                   Contact
                 </Link>
               </Nav.Link>
-              <Button
-                className="sbn"
-                variant="outline-light"
-                style={{ marginLeft: "10px", marginRight: "10px" }}
-              >
-                <Link
-                  to="/signin"
-                  className="signinbuttonnavbar"
-                  style={{ color: "white" }}
-                >
-                  Signin
-                </Link>
-              </Button>
+              {localStorage.getItem("token") !== null
+                ? logoutLinks
+                : loginLinks}
             </Nav>
           </Navbar.Collapse>
         </Container>

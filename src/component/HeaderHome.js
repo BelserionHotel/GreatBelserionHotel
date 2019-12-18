@@ -7,16 +7,12 @@ import jcover1 from "../assets/jcover1.png";
 import jcover2 from "../assets/jcover2.png";
 
 import NavigationBar from "./NavigationBar";
-import NavigationBarMember from "./NavigationBarMember";
 
 function HeaderHome(props) {
+  console.log(props);
   return (
     <Fragment>
-      {JSON.parse(localStorage.getItem("token")) === null ? (
-        <NavigationBar />
-      ) : (
-        <NavigationBarMember />
-      )}
+      <NavigationBar />
 
       <Jumbotron fluid className="jumbotron">
         <Container>
@@ -49,7 +45,7 @@ function HeaderHome(props) {
               fontWeight: "700"
             }}
           >
-            {props.jumbotronTitle}
+            {props.title}
           </h1>
 
           <p
@@ -60,7 +56,7 @@ function HeaderHome(props) {
               fontFamily: "Playfair Display serif"
             }}
           >
-            {props.jumbotronSubtitle}
+            {props.subTitle}
           </p>
           <br />
           <br />
