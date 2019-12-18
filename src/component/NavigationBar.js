@@ -14,7 +14,11 @@ function NavigationBar() {
       variant="outline-light"
       style={{ marginLeft: "10px", marginRight: "10px" }}
     >
-      <Link to="/" className="signinbuttonnavbar" style={{ color: "white" }}>
+      <Link
+        to="/signin"
+        className="signinbuttonnavbar"
+        style={{ color: "white" }}
+      >
         Sign in
       </Link>
     </Button>
