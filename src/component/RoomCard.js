@@ -42,9 +42,9 @@ function RoomCard(props) {
                 <p>
                   2,500,000 <span>IDR/night</span>
                 </p>
-                <button>
-                  <Link to="./booking">BOOK</Link>
-                </button>
+                
+                  <Link to="./booking"><button>BOOK</button></Link>
+                
     
               
               </Col>

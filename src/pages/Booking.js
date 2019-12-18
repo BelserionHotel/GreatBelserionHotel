@@ -7,7 +7,9 @@ import "../App.css";
 import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";
 
-function Booking() {
+function Booking(props) {
+  console.log(props);
+  
   const token = JSON.parse(localStorage.getItem("token"));
 
   return (
