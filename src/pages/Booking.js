@@ -21,8 +21,14 @@ function Booking(props) {
     const dtout = dateValueout.substr(8)
     let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
     let dateToday = today.substr(8)
+    const date1 = new Date(dateValuein);
+    const date2 = new Date(dateValueout);
 
-    // console.log(dateValuein);
+    const Difference_In_Time = date2.getTime() - date1.getTime();
+
+    const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    console.log(Difference_In_Days);
 
     useEffect(() => {
         if (verify() !== undefined) {
@@ -175,7 +181,7 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                1
+                                                {isNaN(Difference_In_Days)?1:Difference_In_Days}
                                             </span>
                                             <br />
                                             <span
