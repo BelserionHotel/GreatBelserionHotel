@@ -275,7 +275,12 @@ function Booking(props) {
                                                         response.status === 200
                                                     ) {
                                                         props.history.push(
+<<<<<<< HEAD
                                                             `/checkout/u/${verify().id}`);
+=======
+                                                            "/checkout"
+                                                        );
+>>>>>>> 75699e98745e9766b8dc2020271f216acf8ea45d
                                                     }
                                                 });
                                         }}
@@ -645,23 +650,7 @@ function Booking(props) {
                             </Col>
                         </Row>
                     </Container>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    <div style={{ marginBottom: "15em" }}></div>
                 </div>
             ) : (
                 <Redirect to={`/signin/${params.id}`} />
