@@ -42,12 +42,18 @@ export default function About() {
                             </div>
                         </Col>
                     </Row>
-                    <Row style={{ marginTop: "100px" }}>
+                    <Row
+                        style={{
+                            marginTop: "100px",
+                            background: "rgb(255,255,255,.7)",
+                            padding: "2em"
+                        }}
+                    >
                         <Col ls={6}>
                             <p
                                 style={{
                                     color: "#5e6666",
-                                    fontFamily: "Open Sans Condensed ",
+                                    fontFamily: "Open Sans ",
                                     fontSize: "25px"
                                 }}
                                 className="textabout"
@@ -84,18 +90,16 @@ export default function About() {
                                 }}
                             />
                         </Col>
-                    </Row>
-                    <br />
-                    <Row>
                         <Col
                             lg={12}
                             style={{
                                 color: "#5e6666",
-                                fontFamily: "Open Sans Condensed ",
+                                fontFamily: "Open Sans ",
                                 fontSize: "25px"
                             }}
                             className="textabout"
                         >
+                            <hr/>
                             Belserion believes that life is brighter when we
                             feel relaxed, youthful, dynamic and sociable.
                             Devoted to nurture a sense of well-being among the
@@ -115,6 +119,7 @@ export default function About() {
                             “The Brighter Side of Life”.
                         </Col>
                     </Row>
+                    <br />
                 </Container>
             </div>
         </Fragment>
