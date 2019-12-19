@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { axios } from "../component/helpers";
+
+
 import { Link, withRouter } from "react-router-dom";
 
 import { Container, Row, Col, Button, Form, Tab, Tabs } from "react-bootstrap";
@@ -8,7 +11,22 @@ import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";
 
 function Checkout(props) {
-  console.log(props);
+  const direct = props.history.location.pathname
+  const sdirect = direct.split("/")
+  // console.log(sdirect);
+  const params = sdirect[3]
+  
+  const [infoRoom, setInfoRoom] = useState({});
+    useEffect(() => {
+        axios()
+            .get(`/reservationRooms/u/${params}`)
+            .then(response => {
+              console.log(response);
+                // setInfoRoom(response.data.data[0]);
+            });
+    }, []);
+    
+
   
   return (
     <div>
