@@ -28,6 +28,33 @@ export default class Rooms extends Component {
     }
 
     render() {
+        const newState = [];
+        for (const roomType of this.state.data) {
+            const {
+                RoomType_id: { Name }
+            } = roomType;
+            newState.push({
+                name: Name,
+                data: [roomType]
+            });
+        }
+
+        let result = [];
+        newState.forEach(item => {
+            var exist = result.filter((v, i) => {
+                return v.name === item.name;
+            });
+            if (exist.length) {
+                var existIndex = result.indexOf(exist[0]);
+                result[existIndex].data = result[existIndex].data.concat(
+                    item.data
+                );
+            } else {
+                result.push(item);
+            }
+        });
+        console.log(result);
+        
         return (
             <Fragment>
                 <HeaderAll jumbotronTitle="Rooms" />
@@ -161,13 +188,13 @@ export default class Rooms extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    {this.state.data.map(data => {
-                        const room_id = data._id;
-                        const type = data.RoomType_id.Name;
-                        const caps = data.RoomType_id.Capacity;
-                        const price = data.RoomType_id.RoomPrice;
-                        const desc = data.RoomType_id.Description;
-                        const image = data.RoomType_id.RoomImage;
+                    {result.map(data => {
+                        const room_id = data.data[0]._id;
+                        const type = data.data[0].RoomType_id.Name;
+                        const caps = data.data[0].RoomType_id.Capacity;
+                        const price = data.data[0].RoomType_id.RoomPrice;
+                        const desc = data.data[0].RoomType_id.Description;
+                        const image = data.data[0].RoomType_id.RoomImage;
 
                         return (
                             <RoomCard
