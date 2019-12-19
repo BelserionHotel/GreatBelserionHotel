@@ -21,8 +21,8 @@ function Checkout(props) {
         axios()
             .get(`/reservationRooms/u/${params}`)
             .then(response => {
-              console.log(response);
-                // setInfoRoom(response.data.data[0]);
+              // console.log(response);
+                setInfoRoom(response.data.data[0]);
             });
     }, []);
     
