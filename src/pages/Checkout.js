@@ -17,14 +17,19 @@ function Checkout(props) {
   const params = sdirect[3]
   
   const [infoRoom, setInfoRoom] = useState({});
+  const [infoUser, setInfoUser] = useState({});
+
     useEffect(() => {
         axios()
             .get(`/reservationRooms/u/${params}`)
             .then(response => {
-              setInfoRoom(response.data.data[0]);
+              setInfoRoom(response.data.data[0])
+              setInfoUser(response.data.data[0].Customer_id)
             });
           }, []);
           console.log(infoRoom);
+          console.log(infoUser);
+
     
 
   
@@ -153,7 +158,7 @@ function Checkout(props) {
                       color: "#ffffff"
                     }}
                   >
-                    1
+                    {infoRoom.DurationNights} 
                   </span>{" "}
                   <br />
                   <span
@@ -175,7 +180,7 @@ function Checkout(props) {
                       color: "#ffffff"
                     }}
                   >
-                    30
+                    {infoRoom.RoomPrice}
                   </span>
                   <span style={{ fontFamily: "lato", color: "#ffffff" }}>
                     {" "}
@@ -207,35 +212,37 @@ function Checkout(props) {
                   marginBottom: "20px"
                 }}
               >
-                <span>Name :</span>
+                <span>
+                  Name : {infoUser.name}
+                </span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "20px" }}>
-                <span>Surname :</span>
+                <span>Surname : {infoUser.surname}</span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "20px" }}>
-                <span>Email :</span>
+                <span>Email : {infoUser.email}</span>
               </Col>
 
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "20px" }}>
-                <span>Phone :</span>
+                <span>Phone : {infoUser.phone}</span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "20px" }}>
-                <span>Address :</span>
+                <span>Address : {infoUser.address}</span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "20px" }}>
-                <span>City :</span>
+                <span>City : {infoUser.city}</span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "40px" }}>
-                <span>Country :</span>
+                <span>Country : {infoUser.country}</span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "40px" }}>
-                <span>ZIP :</span>
+                <span>ZIP : {infoUser.zip}</span>
               </Col>
               <Col lg={4} style={{ fontSize: "14px", marginBottom: "40px" }}>
-                <span>Arrival :</span>
+                <span>Arrival : {infoRoom.ArrivalTime}</span>
               </Col>
               <Col lg={12}>
-                <span>Request :</span>
+                <span>Request : {infoRoom.Request}</span>
               </Col>
 
               <Col lg={12} style={{ marginTop: "50px", marginBottom: "20px" }}>
