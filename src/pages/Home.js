@@ -4,11 +4,17 @@ import "../App.css";
 import jcover2 from "../assets/jcover2.png";
 import img1 from "../assets/img1.jpg";
 import img3 from "../assets/img3.jpg";
+import { axios } from "../component/helpers";
+
 
 import { HeaderHome, DatePanelBlack } from "../component";
 
 export default function Home() {
+
+
+
   return (
+   
     <Fragment>
       <HeaderHome
         jumbotronTitle="Belserion Hotel"

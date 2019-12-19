@@ -14,10 +14,13 @@ import {
   Checkout,
   OrderDetail
 } from "./pages";
+import Tes from './Tes';
 
 function App() {
   return (
+   
     <Fragment>
+       <Tes />
       <Router>
         <Switch>
           <Route path="/" exact={true}>
@@ -45,7 +48,7 @@ function App() {
           <Route path="/signup">
             <Signup />
           </Route>
-          <Route path="/booking">
+          <Route path="/booking/:id">
             <Booking />
           </Route>
           <Route path="/checkout">
