@@ -36,7 +36,7 @@ function RoomCard(props) {
                             >
                                 <p>Prices start at:</p>
                                 <p>
-                                    {props.price} <span>IDR/night</span>
+                                    {props.price.toLocaleString()} <span>IDR/night</span>
                                 </p>
                                 <button>
                                     <Link to={`/booking/${props.id}`}>
