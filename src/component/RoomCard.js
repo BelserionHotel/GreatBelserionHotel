@@ -36,7 +36,8 @@ function RoomCard(props) {
                             >
                                 <p>Prices start at:</p>
                                 <p>
-                                    {props.price.toLocaleString()} <span>IDR/night</span>
+                                    {props.price.toLocaleString()}{" "}
+                                    <span>IDR/night</span>
                                 </p>
                                 <button>
                                     <Link to={`/booking/${props.id}`}>
@@ -47,7 +48,12 @@ function RoomCard(props) {
                                     Guest :
                                     <Form.Control
                                         as="select"
-                                        style={{ backgroundColor: "white", margin:'10px'}}
+                                        style={{
+                                            backgroundColor: "white",
+                                            margin: "10px",
+                                            border: "none",
+                                            width: "30%"
+                                        }}
                                     >
                                         <option>1</option>
                                     </Form.Control>
