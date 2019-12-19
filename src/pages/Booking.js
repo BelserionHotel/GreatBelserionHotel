@@ -249,6 +249,9 @@ function Booking(props) {
                                                 })
                                                 .then(response => {
                                                     // console.log(response);
+                                                    if (response.status===200) {
+                                                        props.history.push("/checkout")
+                                                    }
                                                 });
                                         }}
                                     >
