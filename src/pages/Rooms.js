@@ -10,7 +10,8 @@ import React, { Component, Fragment } from "react";
 
 export default class Rooms extends Component {
     state = {
-        data: []
+        data: [],
+        roomTypes: []
     };
 
     componentDidMount() {
@@ -154,14 +155,30 @@ export default class Rooms extends Component {
                                         marginBottom: "30px"
                                     }}
                                 >
-                                    Best Room
+                                    Our Room
                                 </p>
-                                <img src={jcover2} alt="wlwl"></img>
+                                <img src={jcover2} alt="image-cover"></img>
                             </Col>
                         </Row>
                     </Container>
                     {this.state.data.map(data => {
-                        return <RoomCard capacity={data.title} id={data._id} />;
+                        const room_id = data._id;
+                        const type = data.RoomType_id.Name;
+                        const caps = data.RoomType_id.Capacity;
+                        const price = data.RoomType_id.RoomPrice;
+                        const desc = data.RoomType_id.Description;
+                        const image = data.RoomType_id.RoomImage;
+
+                        return (
+                            <RoomCard
+                                id={room_id}
+                                type={type}
+                                capacity={caps}
+                                price={price}
+                                desc={desc}
+                                image={image}
+                            />
+                        );
                     })}
                 </div>
             </Fragment>
