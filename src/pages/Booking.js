@@ -15,6 +15,14 @@ function Booking(props) {
 
     const token = JSON.parse(localStorage.getItem("token"));
     const [userData, setUserData] = useState({});
+    const [dateValuein, setDateValuein] = useState("");
+    const [dateValueout, setDateValueout] = useState("");
+    const dtin = dateValuein.substr(8)
+    const dtout = dateValueout.substr(8)
+    let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+    let dateToday = today.substr(8)
+
+    console.log(dateValuein);
 
     useEffect(() => {
         if (verify() !== undefined) {
@@ -25,6 +33,8 @@ function Booking(props) {
                 });
         }
     }, []);
+    // const data = handleChange
+    // console.log(data)
 
     return (
         <React.Fragment>
@@ -77,8 +87,8 @@ function Booking(props) {
                                                     fontFamily: "lato",
                                                     color: "#ffffff"
                                                 }}
-                                            >
-                                                13
+                                            >{dtin===""?dateToday:dtin}
+                                               
                                             </span>
                                             <br />
                                             <span
@@ -88,8 +98,8 @@ function Booking(props) {
                                                     fontSize: "12px",
                                                     color: "#ffffff"
                                                 }}
-                                            >
-                                                Dec, 2019 Friday
+                                            > {dateValuein===""?today:dateValuein}
+                                                
                                             </span>
                                             <br />
                                         </Col>
@@ -115,7 +125,7 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                14
+                                                {dtout===""?dateToday:dtout}
                                             </span>
                                             <br />
                                             <span
@@ -126,7 +136,7 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                Dec, 2019 Saturday
+                                                {dateValueout===""?today:dateValueout}
                                             </span>
                                         </Col>
                                         <Col
@@ -228,6 +238,7 @@ function Booking(props) {
                                                 userData.email !== ""
                                                     ? userData.email
                                                     : ""
+                                           
                                         }}
                                         enableReinitialize={true}
                                         onSubmit={values => {
@@ -312,6 +323,19 @@ function Booking(props) {
                                                                     }
                                                                 />
                                                             </Form.Group>
+                                                            <Form.Group controlId="formGroupPassword">
+                                                                <Form.Label>
+                                                                    Check In *
+                                                                </Form.Label>
+                                                                <Form.Control
+                                                                    type="date"
+                                                                    name="checkin"
+                                                                    onChange={(event) => {
+                                                                        handleChange(event.target.value)
+                                                                        setDateValuein(event.target.value);
+                                                                    }}
+                                                                />
+                                                            </Form.Group>
                                                         </Form>
                                                     </Col>
                                                     <Col lg={6}>
@@ -345,6 +369,19 @@ function Booking(props) {
                                                                     ZIP
                                                                 </Form.Label>
                                                                 <Form.Control type="password" />
+                                                            </Form.Group>
+                                                            <Form.Group controlId="formGroupPassword">
+                                                                <Form.Label>
+                                                                    Check Out *
+                                                                </Form.Label>
+                                                                <Form.Control
+                                                                    type="date"
+                                                                    name="checkout"
+                                                                    onChange={(event) => {
+                                                                        handleChange(event.target.value)
+                                                                        setDateValueout(event.target.value);
+                                                                    }}
+                                                                />
                                                             </Form.Group>
                                                         </Form>
                                                     </Col>

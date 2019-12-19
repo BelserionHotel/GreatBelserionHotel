@@ -51,25 +51,6 @@ function RoomCard(props) {
                                     </Link>
                                 </button>
 
-<<<<<<< HEAD
-              <Col lg={4} md={4} sm={12} className="room-price-and-book">
-                <p>Prices start at:</p>
-                <p>
-                  2,500,000 <span>IDR/night</span>
-                </p>
-                <button>
-                  <Link to="./booking">BOOK</Link>
-                </button>
-    
-              
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    </Fragment>
-  );
-=======
                                 <button>VIEW DETAILS</button>
                             </Col>
                         </Row>
@@ -78,6 +59,5 @@ function RoomCard(props) {
             </Container>
         </Fragment>
     );
->>>>>>> miftah
 }
 export default withRouter(RoomCard);
