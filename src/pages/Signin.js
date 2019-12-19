@@ -54,6 +54,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Signin(props) {
+  const direct = props.history.location.pathname
+  const sdirect = direct.split("/")
+  console.log(sdirect[2]);
+
+  
   const classes = useStyles();
 
   return (
@@ -83,7 +88,8 @@ function Signin(props) {
                     "token",
                     JSON.stringify(response.data.data)
                   );
-                  props.history.push("/");
+                  sdirect[2]===undefined?props.history.push("/"):props.history.push(`/booking/${sdirect[2]}`)
+                  
                 }
                 else if (response.data.message==="failed login") {
                   // console.log(response.data.message);
