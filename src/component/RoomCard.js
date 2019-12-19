@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { Form } from "react-bootstrap";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,7 +8,6 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
 function RoomCard(props) {
-    console.log(props.type)
     return (
         <Fragment>
             <Container>
@@ -25,9 +25,7 @@ function RoomCard(props) {
                             <Col lg={8} md={8} sm={12} className="room-info">
                                 <p>{props.type}</p>
                                 <p>{props.desc}</p>
-                                <ul>
-                                    Capacity : {props.capacity}
-                                </ul>
+                                <ul>Capacity : {props.capacity}</ul>
                             </Col>
 
                             <Col
@@ -45,8 +43,15 @@ function RoomCard(props) {
                                         BOOK
                                     </Link>
                                 </button>
-
-                                <button>VIEW DETAILS</button>
+                                <span>
+                                    Guest :
+                                    <Form.Control
+                                        as="select"
+                                        style={{ backgroundColor: "white", margin:'10px'}}
+                                    >
+                                        <option>1</option>
+                                    </Form.Control>
+                                </span>
                             </Col>
                         </Row>
                     </Col>

@@ -17,10 +17,13 @@ function Booking(props) {
     const [userData, setUserData] = useState({});
     const [dateValuein, setDateValuein] = useState("");
     const [dateValueout, setDateValueout] = useState("");
-    const dtin = dateValuein.substr(8)
-    const dtout = dateValueout.substr(8)
-    let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-    let dateToday = today.substr(8)
+    const dtin = dateValuein.substr(8);
+    const dtout = dateValueout.substr(8);
+    let today = new Date()
+        .toJSON()
+        .slice(0, 10)
+        .replace(/-/g, "/");
+    let dateToday = today.substr(8);
     const date1 = new Date(dateValuein);
     const date2 = new Date(dateValueout);
 
@@ -93,8 +96,8 @@ function Booking(props) {
                                                     fontFamily: "lato",
                                                     color: "#ffffff"
                                                 }}
-                                            >{dtin===""?dateToday:dtin}
-                                               
+                                            >
+                                                {dtin === "" ? dateToday : dtin}
                                             </span>
                                             <br />
                                             <span
@@ -104,8 +107,11 @@ function Booking(props) {
                                                     fontSize: "12px",
                                                     color: "#ffffff"
                                                 }}
-                                            > {dateValuein===""?today:dateValuein}
-                                                
+                                            >
+                                                {" "}
+                                                {dateValuein === ""
+                                                    ? today
+                                                    : dateValuein}
                                             </span>
                                             <br />
                                         </Col>
@@ -131,7 +137,9 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                {dtout===""?dateToday:dtout}
+                                                {dtout === ""
+                                                    ? dateToday
+                                                    : dtout}
                                             </span>
                                             <br />
                                             <span
@@ -142,7 +150,9 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                {dateValueout===""?today:dateValueout}
+                                                {dateValueout === ""
+                                                    ? today
+                                                    : dateValueout}
                                             </span>
                                         </Col>
                                         <Col
@@ -181,7 +191,9 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                {isNaN(Difference_In_Days)?1:Difference_In_Days}
+                                                {isNaN(Difference_In_Days)
+                                                    ? 1
+                                                    : Difference_In_Days}
                                             </span>
                                             <br />
                                             <span
@@ -244,7 +256,6 @@ function Booking(props) {
                                                 userData.email !== ""
                                                     ? userData.email
                                                     : ""
-                                           
                                         }}
                                         enableReinitialize={true}
                                         onSubmit={values => {
@@ -255,8 +266,12 @@ function Booking(props) {
                                                 })
                                                 .then(response => {
                                                     // console.log(response);
-                                                    if (response.status===200) {
-                                                        props.history.push("/checkout")
+                                                    if (
+                                                        response.status === 200
+                                                    ) {
+                                                        props.history.push(
+                                                            "/checkout"
+                                                        );
                                                     }
                                                 });
                                         }}
@@ -346,14 +361,24 @@ function Booking(props) {
                                                                 <Form.Control
                                                                     type="date"
                                                                     name="checkin"
-                                                                    onChange={(event) => {
+                                                                    onChange={event => {
                                                                         setFieldValue(
                                                                             "CheckInDate",
-                                                                            event.currentTarget.value
-                                                                        )
-                                                                        
-                                                                        handleChange(event.target.value)
-                                                                        setDateValuein(event.target.value);
+                                                                            event
+                                                                                .currentTarget
+                                                                                .value
+                                                                        );
+
+                                                                        handleChange(
+                                                                            event
+                                                                                .target
+                                                                                .value
+                                                                        );
+                                                                        setDateValuein(
+                                                                            event
+                                                                                .target
+                                                                                .value
+                                                                        );
                                                                     }}
                                                                 />
                                                             </Form.Group>
@@ -371,53 +396,61 @@ function Booking(props) {
                                                                 <Form.Label>
                                                                     Surname
                                                                 </Form.Label>
-                                                                <Form.Control type="text"
-                                                                name="surname"
-                                                                value={
-                                                                    values.surname
-                                                                }
-                                                                onChange={
-                                                                    handleChange
-                                                                } />
+                                                                <Form.Control
+                                                                    type="text"
+                                                                    name="surname"
+                                                                    value={
+                                                                        values.surname
+                                                                    }
+                                                                    onChange={
+                                                                        handleChange
+                                                                    }
+                                                                />
                                                             </Form.Group>
                                                             <Form.Group controlId="formGroupPassword">
                                                                 <Form.Label>
                                                                     Telephone
                                                                 </Form.Label>
-                                                                <Form.Control type="text"
-                                                                name="phone"
-                                                                value={
-                                                                    values.phone
-                                                                }
-                                                                onChange={
-                                                                    handleChange
-                                                                } />
+                                                                <Form.Control
+                                                                    type="text"
+                                                                    name="phone"
+                                                                    value={
+                                                                        values.phone
+                                                                    }
+                                                                    onChange={
+                                                                        handleChange
+                                                                    }
+                                                                />
                                                             </Form.Group>
                                                             <Form.Group controlId="formGroupPassword">
                                                                 <Form.Label>
                                                                     City
                                                                 </Form.Label>
-                                                                <Form.Control type="text"
-                                                                 name="city"
-                                                                 value={
-                                                                     values.city
-                                                                 }
-                                                                 onChange={
-                                                                     handleChange
-                                                                 } />
+                                                                <Form.Control
+                                                                    type="text"
+                                                                    name="city"
+                                                                    value={
+                                                                        values.city
+                                                                    }
+                                                                    onChange={
+                                                                        handleChange
+                                                                    }
+                                                                />
                                                             </Form.Group>
                                                             <Form.Group controlId="formGroupPassword">
                                                                 <Form.Label>
                                                                     ZIP
                                                                 </Form.Label>
-                                                                <Form.Control type="text"
-                                                                 name="zip"
-                                                                 value={
-                                                                     values.zip
-                                                                 }
-                                                                 onChange={
-                                                                     handleChange
-                                                                 } />
+                                                                <Form.Control
+                                                                    type="text"
+                                                                    name="zip"
+                                                                    value={
+                                                                        values.zip
+                                                                    }
+                                                                    onChange={
+                                                                        handleChange
+                                                                    }
+                                                                />
                                                             </Form.Group>
                                                             <Form.Group controlId="formGroupPassword">
                                                                 <Form.Label>
@@ -426,13 +459,23 @@ function Booking(props) {
                                                                 <Form.Control
                                                                     type="date"
                                                                     name="checkout"
-                                                                    onChange={(event) => {
+                                                                    onChange={event => {
                                                                         setFieldValue(
                                                                             "CheckOutDate",
-                                                                            event.currentTarget.value
-                                                                        )
-                                                                        handleChange(event.target.value)
-                                                                        setDateValueout(event.target.value);
+                                                                            event
+                                                                                .currentTarget
+                                                                                .value
+                                                                        );
+                                                                        handleChange(
+                                                                            event
+                                                                                .target
+                                                                                .value
+                                                                        );
+                                                                        setDateValueout(
+                                                                            event
+                                                                                .target
+                                                                                .value
+                                                                        );
                                                                     }}
                                                                 />
                                                             </Form.Group>
@@ -598,23 +641,7 @@ function Booking(props) {
                             </Col>
                         </Row>
                     </Container>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    <div style={{ marginBottom: "15em" }}></div>
                 </div>
             ) : (
                 <Redirect to={`/signin/${params.id}`} />
