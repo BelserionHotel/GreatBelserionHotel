@@ -116,11 +116,10 @@ export default function Home() {
                                     width: "70%"
                                 }}
                             >
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Magni praesentium nobis
-                                ratione molestias eligendi repellat qui eius
-                                cumque ipsam maxime voluptate pariatur ducimus,
-                                iure iusto ipsa, dolores at quas quis?
+                                We are your connection point. With a variety of
+                                venues and flexible meetings spaces in a
+                                multitude of destinations, we’ll help you make
+                                the most of your time together.{" "}
                             </span>
                         </p>
                         <Button

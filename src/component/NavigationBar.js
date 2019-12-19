@@ -7,7 +7,7 @@ function NavigationBar() {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
-        <Container>
+        <Container>z
           <Navbar.Brand className="navbrand">Belserion</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -17,7 +17,6 @@ function NavigationBar() {
                   Home
                 </Link>
               </Nav.Link>
-
               <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/about" className="link">
                   About
@@ -26,22 +25,6 @@ function NavigationBar() {
               <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
                 <Link to="/rooms" className="link">
                   Rooms
-                </Link>
-              </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
-                <Link to="/services" className="link">
-                  Services
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
-                <Link to="/gallery" className="link">
-                  Gallery
-                </Link>
-              </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
-                <Link to="/contact" className="link">
-                  Contact
                 </Link>
               </Nav.Link>
               <Button
