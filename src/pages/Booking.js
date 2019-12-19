@@ -15,6 +15,8 @@ function Booking(props) {
 
     const token = JSON.parse(localStorage.getItem("token"));
     const [userData, setUserData] = useState({});
+    const [infoRoom, setInfoRoom] = useState({});
+
     const [dateValuein, setDateValuein] = useState("");
     const [dateValueout, setDateValueout] = useState("");
     const dtin = dateValuein.substr(8);
@@ -31,8 +33,6 @@ function Booking(props) {
 
     const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
-    console.log(Difference_In_Days);
-
     useEffect(() => {
         if (verify() !== undefined) {
             axios()
@@ -41,9 +41,14 @@ function Booking(props) {
                     setUserData(response.data.data);
                 });
         }
+        axios()
+            .get(`/rooms/${params.id}`)
+            .then(response => {
+                setInfoRoom(response.data.data[0]);
+            });
     }, []);
     // const data = handleChange
-    // console.log(data)
+    console.log(infoRoom, "roomm")
 
     return (
         <React.Fragment>
@@ -218,7 +223,7 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                30
+                                                {infoRoom.RoomType_id!==undefined&&infoRoom.RoomType_id.RoomPrice}
                                             </span>
                                             <span
                                                 style={{
@@ -270,8 +275,7 @@ function Booking(props) {
                                                         response.status === 200
                                                     ) {
                                                         props.history.push(
-                                                            "/checkout"
-                                                        );
+                                                            `/checkout/u/${verify().id}`);
                                                     }
                                                 });
                                         }}
