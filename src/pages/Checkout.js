@@ -10,6 +10,7 @@ import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";
 
 function Checkout(props) {
+  console.log(props)
     const direct = props.history.location.pathname;
     const sdirect = direct.split("/");
     // console.log(sdirect);
@@ -17,6 +18,10 @@ function Checkout(props) {
 
     const [infoRoom, setInfoRoom] = useState({});
     const [infoUser, setInfoUser] = useState({});
+  
+    // const dateValuein = infoRoom.CheckInDate
+    // const dtin = dateValuein.substr(8);
+    // const dtout = dateValueout.substr(8);
 
     useEffect(() => {
         axios()
@@ -76,7 +81,7 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        13
+                                         {infoRoom.CheckInDate===undefined? "1" : infoRoom.CheckInDate.substr(8 ,10).substr(0 ,2)}
                                     </span>
                                     <br />
                                     <span
@@ -87,7 +92,7 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        Dec, 2019 Friday
+                                        {infoRoom.CheckInDate===undefined? "loading..." : infoRoom.CheckInDate.substr(0, 10)}
                                     </span>
                                     <br />
                                 </Col>
@@ -110,7 +115,7 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        14
+                                        {infoRoom.CheckOutDate===undefined? "1" : infoRoom.CheckOutDate.substr(8 ,10).substr(0 ,2)}
                                     </span>
                                     <br />{" "}
                                     <span
@@ -121,7 +126,7 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        Dec, 2019 Saturday
+                                        {infoRoom.CheckOutDate===undefined? "loading..." : infoRoom.CheckOutDate.substr(0, 10)}
                                     </span>
                                 </Col>
                                 <Col lg={6} style={{ marginTop: "40px" }}>
@@ -176,7 +181,7 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        {infoRoom.RoomPrice}
+                                        {infoRoom.RoomPrice=== undefined ? 0 : infoRoom.RoomPrice}
                                     </span>
                                     <span
                                         style={{

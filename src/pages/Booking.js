@@ -52,6 +52,7 @@ function Booking(props) {
 
     return (
         <React.Fragment>
+
             {token ? (
                 <div>
                     <HeaderAll jumbotronTitle="Booking"></HeaderAll>
