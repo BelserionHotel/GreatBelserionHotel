@@ -14,6 +14,7 @@ import Container from "@material-ui/core/Container";
 import { Formik, ErrorMessage } from "formik";
 import { loginValidation } from "../component/validate";
 import { axios } from "../component/helpers";
+import Swal from "sweetalert2";
 
 import { HeaderAuth } from "../component";
 
@@ -78,6 +79,10 @@ function Signin(props) {
                                         response.data.message ===
                                         "Login successfull"
                                     ) {
+                                        Swal.fire({
+                                            icon: "success",
+                                            title: `Your Room Has Been Booked`,
+                                        });
                                         // console.log(response.data.message);
 
                                         localStorage.setItem(
