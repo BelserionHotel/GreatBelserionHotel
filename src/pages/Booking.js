@@ -48,7 +48,6 @@ function Booking(props) {
             });
     }, []);
     // const data = handleChange
-    console.log(infoRoom, "roomm");
 
     return (
         <React.Fragment>
@@ -274,7 +273,6 @@ function Booking(props) {
                                                     Room_id: params.id
                                                 })
                                                 .then(response => {
-                                                    // console.log(response);
                                                     if (
                                                         response.status === 200
                                                     ) {

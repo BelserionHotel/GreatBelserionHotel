@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Form, Tab, Tabs } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../App.css";
 import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";

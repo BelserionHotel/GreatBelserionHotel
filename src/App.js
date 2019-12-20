@@ -4,9 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   Home,
   About,
-  Services,
-  Contact,
-  Gallery,
   Signin,
   Signup,
   Rooms,
@@ -31,16 +28,6 @@ function App() {
           </Route>
           <Route path="/rooms">
             <Rooms />
-          </Route>
-          <Route path="/services">
-            <Services />
-          </Route>
-
-          <Route path="/gallery">
-            <Gallery />
-          </Route>
-          <Route path="/contact">
-            <Contact />
           </Route>
           <Route path="/signin">
             <Signin />
