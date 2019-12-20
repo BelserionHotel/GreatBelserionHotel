@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { axios } from "../component/helpers";
+import Swal from "sweetalert2";
 
 import { Link, withRouter } from "react-router-dom";
 
-import { Container, Row, Col, Button, Form, Tab, Tabs } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "../App.css";
 import CreditCardInput from "react-credit-card-input";
 import co from "../assets/checkout.jpg";
 import { HeaderAll } from "../component";
 
 function Checkout(props) {
-  console.log(props)
     const direct = props.history.location.pathname;
     const sdirect = direct.split("/");
-    // console.log(sdirect);
+
     const params = sdirect[3];
 
     const [infoRoom, setInfoRoom] = useState({});
     const [infoUser, setInfoUser] = useState({});
-  
+
     // const dateValuein = infoRoom.CheckInDate
     // const dtin = dateValuein.substr(8);
     // const dtout = dateValueout.substr(8);
@@ -31,8 +31,21 @@ function Checkout(props) {
                 setInfoUser(response.data.data[0].Customer_id);
             });
     }, []);
-    console.log(infoRoom);
-    console.log(infoUser);
+
+    const handleClick = () => {
+        axios()
+            .put(`reservationRooms/checkout/${params}`)
+            .then(result => {
+                if (result.status === 200) {
+                    Swal.fire(
+                        "Thank You",
+                        "Your reservation is completed",
+                        "success"
+                    );
+                    props.history.push("/");
+                }
+            });
+    };
 
     return (
         <div>
@@ -81,7 +94,12 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                         {infoRoom.CheckInDate===undefined? "1" : infoRoom.CheckInDate.substr(8 ,10).substr(0 ,2)}
+                                        {infoRoom.CheckInDate === undefined
+                                            ? "1"
+                                            : infoRoom.CheckInDate.substr(
+                                                  8,
+                                                  10
+                                              ).substr(0, 2)}
                                     </span>
                                     <br />
                                     <span
@@ -92,7 +110,12 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        {infoRoom.CheckInDate===undefined? "loading..." : infoRoom.CheckInDate.substr(0, 10)}
+                                        {infoRoom.CheckInDate === undefined
+                                            ? "loading..."
+                                            : infoRoom.CheckInDate.substr(
+                                                  0,
+                                                  10
+                                              )}
                                     </span>
                                     <br />
                                 </Col>
@@ -115,7 +138,12 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        {infoRoom.CheckOutDate===undefined? "1" : infoRoom.CheckOutDate.substr(8 ,10).substr(0 ,2)}
+                                        {infoRoom.CheckOutDate === undefined
+                                            ? "1"
+                                            : infoRoom.CheckOutDate.substr(
+                                                  8,
+                                                  10
+                                              ).substr(0, 2)}
                                     </span>
                                     <br />{" "}
                                     <span
@@ -126,7 +154,12 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        {infoRoom.CheckOutDate===undefined? "loading..." : infoRoom.CheckOutDate.substr(0, 10)}
+                                        {infoRoom.CheckOutDate === undefined
+                                            ? "loading..."
+                                            : infoRoom.CheckOutDate.substr(
+                                                  0,
+                                                  10
+                                              )}
                                     </span>
                                 </Col>
                                 <Col lg={6} style={{ marginTop: "40px" }}>
@@ -181,7 +214,9 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        {infoRoom.RoomPrice=== undefined ? 0 : infoRoom.RoomPrice}
+                                        {infoRoom.RoomPrice === undefined
+                                            ? 0
+                                            : infoRoom.RoomPrice}
                                     </span>
                                     <span
                                         style={{
@@ -330,9 +365,7 @@ function Checkout(props) {
                                 </span>
                                 <br />
                                 <CreditCardInput />
-                                <Link to="/orderdetail">
-                                    <Button> Book Now</Button>
-                                </Link>
+                                <Button onClick={handleClick}>Book Now</Button>
                             </Col>
                         </Row>
                     </Col>
