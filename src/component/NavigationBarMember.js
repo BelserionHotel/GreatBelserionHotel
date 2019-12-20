@@ -31,22 +31,6 @@ function NavigationBarMember() {
                   Rooms
                 </Link>
               </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
-                <Link to="/services" className="link">
-                  Services
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
-                <Link to="/gallery" className="link">
-                  Gallery
-                </Link>
-              </Nav.Link>
-              <Nav.Link style={{ marginLeft: "15px", marginRight: "15px" }}>
-                <Link to="/contact" className="link">
-                  Contact
-                </Link>
-              </Nav.Link>
               <Button
                 className="sbn"
                 variant="outline-light"

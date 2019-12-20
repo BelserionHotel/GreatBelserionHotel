@@ -48,7 +48,7 @@ function Booking(props) {
             });
     }, []);
     // const data = handleChange
-    console.log(infoRoom, "roomm")
+    console.log(infoRoom, "roomm");
 
     return (
         <React.Fragment>
@@ -223,15 +223,18 @@ function Booking(props) {
                                                     color: "#ffffff"
                                                 }}
                                             >
-                                                {infoRoom.RoomType_id!==undefined&&infoRoom.RoomType_id.RoomPrice}
+                                                {infoRoom.RoomType_id !==
+                                                    undefined &&
+                                                    infoRoom.RoomType_id.RoomPrice.toLocaleString()}
                                             </span>
                                             <span
                                                 style={{
                                                     fontFamily: "lato",
-                                                    color: "#ffffff"
+                                                    color: "#ffffff",
+                                                    marginLeft: "5px"
                                                 }}
                                             >
-                                                $ / TOTAL
+                                                IDR / TOTAL
                                             </span>
                                         </Col>
                                     </Row>
@@ -275,7 +278,10 @@ function Booking(props) {
                                                         response.status === 200
                                                     ) {
                                                         props.history.push(
-                                                            `/checkout/u/${verify().id}`);
+                                                            `/checkout/u/${
+                                                                verify().id
+                                                            }`
+                                                        );
                                                     }
                                                 })
                                         }}

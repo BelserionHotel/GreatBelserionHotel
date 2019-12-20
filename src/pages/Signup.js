@@ -1,7 +1,5 @@
-
-
 // export default withRouter(Signup);
-import React from "react";
+import React, { Fragment } from "react";
 import { withRouter, Link } from "react-router-dom";
 import { Formik, ErrorMessage } from "formik";
 import { validationForm } from "../component/validate";
@@ -15,7 +13,9 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { axios } from "../component/helpers"
+import { axios } from "../component/helpers";
+
+import { HeaderAuth } from "../component";
 
 const useStyles = makeStyles(theme => ({
     "@global": {
@@ -53,148 +53,151 @@ function Signup(props) {
     };
 
     return (
-        <Container component="main" maxWidth="xs">
-            <CssBaseline />
-            <div className={classes.paper}>
-                <Avatar className={classes.avatar}>
-                    <LockOutlinedIcon />
-                </Avatar>
-                <Typography component="h1" variant="h5">
-                    Sign up
-                </Typography>
-                <Formik
-                    initialValues={{
-                        email: "",
-                        password: ""
-                    }}
-                    validate={validationForm}
-                    onSubmit={values => {
-                        let formData = new FormData();
+        <Fragment>
+            <HeaderAuth
+                jumbotronTitle="Belserion Hotel"
+                jumbotronSubtitle="Luxury Resort &amp; Spa"
+            ></HeaderAuth>
+            <Container component="main" maxWidth="xs">
+                <CssBaseline />
+                <div className={classes.paper}>
+                    <Avatar className={classes.avatar}>
+                        <LockOutlinedIcon />
+                    </Avatar>
+                    <Typography component="h1" variant="h5">
+                        Sign up
+                    </Typography>
+                    <Formik
+                        initialValues={{
+                            email: "",
+                            password: ""
+                        }}
+                        validate={validationForm}
+                        onSubmit={values => {
+                            let formData = new FormData();
 
-                        for (const key in values) {
-                            if (values.hasOwnProperty(key)) {
-                                formData.append(key, values[key]);
-                                if (key === "image") {
-                                    formData.append(key, values.image.file);
+                            for (const key in values) {
+                                if (values.hasOwnProperty(key)) {
+                                    formData.append(key, values[key]);
+                                    if (key === "image") {
+                                        formData.append(key, values.image.file);
+                                    }
                                 }
                             }
-                        }
 
-                        axios()
-                            .post(`/users`, values)
-                            .then(response => {
-                                if (response.status === 201) {
-                                    props.history.push("/signin");
-                                }
-                            });
-                    }}
-                >
-                    {({
-                        values,
-                        handleChange,
-                        handleBlur,
-                        handleSubmit,
-                        setFieldValue,
-                        isSubmitting
-                    }) => (
-                        <form
-                            className={classes.form}
-                            noValidate
-                            onSubmit={handleSubmit}
-                        >
-                            <Grid container spacing={2}>
-                                <Grid item xs={12}>
-                                    <TextField
-                                        autoComplete="uname"
-                                        name="name"
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="name"
-                                        label="Name"
-                                        autoFocus
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        defaultValue={values.name}
-                                    />
-                                    <p
-                                        style={{
-                                            color: "red",
-                                            fontStyle: "italic"
-                                        }}
-                                    >
-                                        <ErrorMessage name="name" />
-                                    </p>
-                                </Grid>
-                               
-                                <Grid item xs={12}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        id="email"
-                                        label="Email Address"
-                                        name="email"
-                                        autoComplete="email"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        defaultValue={values.email}
-                                    />
-                                    <p
-                                        style={{
-                                            color: "red",
-                                            fontStyle: "italic"
-                                        }}
-                                    >
-                                        <ErrorMessage name="email" />
-                                    </p>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextField
-                                        variant="outlined"
-                                        required
-                                        fullWidth
-                                        name="password"
-                                        label="Password"
-                                        type="password"
-                                        id="password"
-                                        autoComplete="current-password"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        defaultValue={values.password}
-                                    />
-                                    <p
-                                        style={{
-                                            color: "red",
-                                            fontStyle: "italic"
-                                        }}
-                                    >
-                                        <ErrorMessage name="password" />
-                                    </p>
-                                </Grid>
-                            </Grid>
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                color="primary"
-                                className={classes.submit}
+                            axios()
+                                .post(`/users`, values)
+                                .then(response => {
+                                    if (response.status === 201) {
+                                        props.history.push("/signin");
+                                    }
+                                });
+                        }}
+                    >
+                        {({
+                            values,
+                            handleChange,
+                            handleBlur,
+                            handleSubmit,
+                            setFieldValue,
+                            isSubmitting
+                        }) => (
+                            <form
+                                className={classes.form}
+                                noValidate
+                                onSubmit={handleSubmit}
                             >
-                                Sign Up
-                            </Button>
-                            <Grid container justify="flex-end">
-                                <Grid item>
-                                    <AnchorLink href="" variant="body2">
-                                        Already have an account?
-                                    </AnchorLink>
-                                    <Link to="/signin">Sign in</Link>
+                                <Grid container spacing={2}>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            autoComplete="uname"
+                                            name="name"
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            id="name"
+                                            label="Name"
+                                            autoFocus
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            defaultValue={values.name}
+                                        />
+                                        <p
+                                            style={{
+                                                color: "red",
+                                                fontStyle: "italic"
+                                            }}
+                                        >
+                                            <ErrorMessage name="name" />
+                                        </p>
+                                    </Grid>
+
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            id="email"
+                                            label="Email Address"
+                                            name="email"
+                                            autoComplete="email"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            defaultValue={values.email}
+                                        />
+                                        <p
+                                            style={{
+                                                color: "red",
+                                                fontStyle: "italic"
+                                            }}
+                                        >
+                                            <ErrorMessage name="email" />
+                                        </p>
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <TextField
+                                            variant="outlined"
+                                            required
+                                            fullWidth
+                                            name="password"
+                                            label="Password"
+                                            type="password"
+                                            id="password"
+                                            autoComplete="current-password"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            defaultValue={values.password}
+                                        />
+                                        <p
+                                            style={{
+                                                color: "red",
+                                                fontStyle: "italic"
+                                            }}
+                                        >
+                                            <ErrorMessage name="password" />
+                                        </p>
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </form>
-                    )}
-                </Formik>
-            </div>
-        </Container>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    color="primary"
+                                    className={classes.submit}
+                                >
+                                    Sign Up
+                                </Button>
+                                <Grid container justify="flex-end">
+                                    <Grid item>
+                                        <Link to="/signin">Have an Account?, Sign in</Link>
+                                    </Grid>
+                                </Grid>
+                            </form>
+                        )}
+                    </Formik>
+                </div>
+            </Container>
+        </Fragment>
     );
 }
 

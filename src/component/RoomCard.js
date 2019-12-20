@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Form } from "react-bootstrap";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -26,6 +25,7 @@ function RoomCard(props) {
                                 <p>{props.type}</p>
                                 <p>{props.desc}</p>
                                 <ul>Capacity : {props.capacity}</ul>
+                                <ul>Facilities : {props.fasilities}</ul>
                             </Col>
 
                             <Col
@@ -36,22 +36,14 @@ function RoomCard(props) {
                             >
                                 <p>Prices start at:</p>
                                 <p>
-                                    {props.price.toLocaleString()} <span>IDR/night</span>
+                                    {props.price.toLocaleString()}{" "}
+                                    <span>IDR/night</span>
                                 </p>
                                 <button>
                                     <Link to={`/booking/${props.id}`}>
                                         BOOK
                                     </Link>
                                 </button>
-                                <span>
-                                    Guest :
-                                    <Form.Control
-                                        as="select"
-                                        style={{ backgroundColor: "white", margin:'10px'}}
-                                    >
-                                        <option>1</option>
-                                    </Form.Control>
-                                </span>
                             </Col>
                         </Row>
                     </Col>
