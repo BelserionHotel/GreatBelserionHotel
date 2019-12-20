@@ -40,8 +40,8 @@ export default class Rooms extends Component {
         }
 
         let result = [];
-        newState.forEach(item => {
 
+        newState.forEach(item => {
             var exist = result.filter((v, i) => {
                 return v.name === item.name;
             });
@@ -98,7 +98,6 @@ export default class Rooms extends Component {
                         const desc = data.data[0].RoomType_id.Description;
                         const image = data.data[0].RoomType_id.RoomImage;
                         const facilities = data.data[0].RoomType_id.Facilities;
-
                         return (
                             <RoomCard
                                 id={room_id}
@@ -108,6 +107,7 @@ export default class Rooms extends Component {
                                 desc={desc}
                                 image={image}
                                 facilities={facilities}
+                                countAva = {data.data.length}
                             />
                         );
                     })}
