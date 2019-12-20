@@ -216,7 +216,7 @@ function Checkout(props) {
                                     >
                                         {infoRoom.RoomPrice === undefined
                                             ? 0
-                                            : infoRoom.RoomPrice}
+                                            : infoRoom.RoomPrice.toLocaleString()}
                                     </span>
                                     <span
                                         style={{

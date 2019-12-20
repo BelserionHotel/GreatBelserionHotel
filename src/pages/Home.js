@@ -36,6 +36,7 @@ export default function Home() {
                                 lg={6}
                                 xl={6}
                                 id="item2"
+                            
                                 style={{
                                     backgroundColor: "black",
                                     color: " #e2c285",
@@ -59,11 +60,14 @@ export default function Home() {
                                             color: "#blaca3",
                                             position: "relative",
                                             display: "inline-block",
-                                            width: "70%"
+                                            width: "70%",
+                                            marginBottom:'80px'
+
                                         }}
                                     >
                                         We will provide the best service during
-                                        your stay at our hotel
+                                        your stay at our hotel <br/>
+                                        We are your connection point. With a variety of venues and flexible meetings spaces in a multitude of destinations, we’ll help you make the most of your time together.
                                     </span>
                                 </p>
                             </Col>
@@ -104,7 +108,9 @@ export default function Home() {
                                     color: "#blaca3",
                                     position: "relative",
                                     display: "inline-block",
-                                    width: "70%"
+                                    width: "70%",
+                                    marginBottom:'80px'
+
                                 }}
                             >
                                 We are your connection point. With a variety of
