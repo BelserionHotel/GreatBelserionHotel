@@ -41,6 +41,7 @@ export default class Rooms extends Component {
 
         let result = [];
         newState.forEach(item => {
+
             var exist = result.filter((v, i) => {
                 return v.name === item.name;
             });
@@ -53,8 +54,6 @@ export default class Rooms extends Component {
                 result.push(item);
             }
         });
-        console.log(result);
-
         return (
             <Fragment>
                 <HeaderAll jumbotronTitle="Rooms" />

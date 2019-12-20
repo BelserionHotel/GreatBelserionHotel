@@ -66,15 +66,6 @@ export default function Home() {
                                         your stay at our hotel
                                     </span>
                                 </p>
-                                <Button
-                                    style={{
-                                        marginTop: "30px",
-                                        marginBottom: "50px"
-                                    }}
-                                    variant="outline-light"
-                                >
-                                    learn more
-                                </Button>
                             </Col>
                         </Row>
                     </Col>
@@ -122,12 +113,6 @@ export default function Home() {
                                 the most of your time together.{" "}
                             </span>
                         </p>
-                        <Button
-                            style={{ marginTop: "30px", marginBottom: "50px" }}
-                            variant="outline-light"
-                        >
-                            learn more
-                        </Button>
                     </Col>
                 </Row>
             </div>
