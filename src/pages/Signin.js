@@ -79,10 +79,7 @@ function Signin(props) {
                                         response.data.message ===
                                         "Login successfull"
                                     ) {
-                                        Swal.fire({
-                                            icon: "success",
-                                            title: `Your Room Has Been Booked`,
-                                        });
+                                       
                                         // console.log(response.data.message);
 
                                         localStorage.setItem(
