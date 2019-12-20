@@ -25,7 +25,7 @@ function RoomCard(props) {
                                 <p>{props.type}</p>
                                 <p>{props.desc}</p>
                                 <ul>Capacity : {props.capacity}</ul>
-                                <ul>Facilities : {props.fasilities}</ul>
+                                <ul>Facilities : {props.facilities}</ul>
                             </Col>
 
                             <Col

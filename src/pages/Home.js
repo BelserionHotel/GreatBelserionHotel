@@ -84,7 +84,7 @@ export default function Home() {
                 </Row>
                 <Row
                     className="bawah"
-                    style={{ width: "100%", margin: "auto" }}
+                    style={{ width: "100%", margin: "0 auto" }}
                 >
                     <Col
                         xs={12}
@@ -94,7 +94,7 @@ export default function Home() {
                             backgroundColor: "black",
                             color: " #e2c285",
                             width: "100%",
-                            border: "1px solid #e2c285"
+                            border: "1px solid #e2c285", margin: "0 auto"
                         }}
                     >
                         <p

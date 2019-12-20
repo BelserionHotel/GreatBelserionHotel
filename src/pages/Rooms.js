@@ -98,6 +98,7 @@ export default class Rooms extends Component {
                         const price = data.data[0].RoomType_id.RoomPrice;
                         const desc = data.data[0].RoomType_id.Description;
                         const image = data.data[0].RoomType_id.RoomImage;
+                        const facilities = data.data[0].RoomType_id.Facilities;
 
                         return (
                             <RoomCard
@@ -107,6 +108,7 @@ export default class Rooms extends Component {
                                 price={price}
                                 desc={desc}
                                 image={image}
+                                facilities={facilities}
                             />
                         );
                     })}

@@ -176,7 +176,7 @@ function Checkout(props) {
                                             color: "#ffffff"
                                         }}
                                     >
-                                        {infoRoom.RoomPrice.toLocaleString()}
+                                        {infoRoom.RoomPrice}
                                     </span>
                                     <span
                                         style={{
@@ -317,94 +317,14 @@ function Checkout(props) {
                                 </span>
                             </Col>
                             <Col lg={12}>
-                                <Tabs defaultActiveKey="bank">
-                                    <Tab eventKey="bank" title="BANK TRANSFER">
-                                        <span>
-                                            <br />
-                                            Your reservation will be confirmed
-                                            when we receive the bank transfer,
-                                            below our data :
-                                            <br />
-                                        </span>
-                                        <Row style={{ marginTop: "35px" }}>
-                                            <Col lg={6}>
-                                                Bank Name :
-                                                <span
-                                                    style={{
-                                                        color: "#7e7e7e",
-                                                        fontSize: "13px",
-                                                        display: "flex",
-                                                        justifyContent: "right",
-                                                        marginTop: "-20px"
-                                                    }}
-                                                >
-                                                    KEB Hana BANK
-                                                </span>
-                                                <hr />
-                                            </Col>
-                                            <Col lg={6}>
-                                                Holder Name :
-                                                <span
-                                                    style={{
-                                                        color: "#7e7e7e",
-                                                        fontSize: "13px",
-                                                        display: "flex",
-                                                        justifyContent: "right",
-                                                        marginTop: "-20px"
-                                                    }}
-                                                >
-                                                    Rizkian Akbar
-                                                </span>
-                                                <hr />
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col lg={6}>
-                                                Account Number :{" "}
-                                                <span
-                                                    style={{
-                                                        color: "#7e7e7e",
-                                                        fontSize: "13px",
-                                                        display: "flex",
-                                                        justifyContent: "right",
-                                                        marginTop: "-20px"
-                                                    }}
-                                                >
-                                                    65432415
-                                                </span>
-                                                <hr />
-                                            </Col>
-                                            <Col lg={6}>
-                                                Bank City :{" "}
-                                                <span
-                                                    style={{
-                                                        color: "#7e7e7e",
-                                                        fontSize: "13px",
-                                                        display: "flex",
-                                                        justifyContent: "right",
-                                                        marginTop: "-20px"
-                                                    }}
-                                                >
-                                                    Jakarta
-                                                </span>
-                                                <hr />
-                                            </Col>
-                                        </Row>
-                                    </Tab>
-                                    <Tab
-                                        eventKey="creditcard"
-                                        title="CREDIT CARD"
-                                    >
-                                        <span>
-                                            <br />
-                                            Simple and safe. Make payments with
-                                            any type of credit card.
-                                            <br />
-                                        </span>
-                                        <br />
-                                        <CreditCardInput />
-                                    </Tab>
-                                </Tabs>
+                                <span>
+                                    <br />
+                                    Simple and safe. Make payments with any type
+                                    of credit card.
+                                    <br />
+                                </span>
+                                <br />
+                                <CreditCardInput />
                                 <Link to="/orderdetail">
                                     <Button> Book Now</Button>
                                 </Link>
