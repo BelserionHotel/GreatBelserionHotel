@@ -26,6 +26,7 @@ function RoomCard(props) {
                                 <p>{props.desc}</p>
                                 <ul>Capacity : {props.capacity}</ul>
                                 <ul>Facilities : {props.facilities}</ul>
+                                <ul>Room Availables left : {props.countAva}</ul>
                             </Col>
 
                             <Col
@@ -44,8 +45,6 @@ function RoomCard(props) {
                                         BOOK
                                     </Link>
                                 </button>
-                                <p>Room Availables left : </p>
-                                <span> {props.countAva} </span>
                             </Col>
                         </Row>
                     </Col>

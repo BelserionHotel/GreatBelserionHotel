@@ -98,6 +98,7 @@ export default class Rooms extends Component {
                         const desc = data.data[0].RoomType_id.Description;
                         const image = data.data[0].RoomType_id.RoomImage;
                         const facilities = data.data[0].RoomType_id.Facilities;
+                        console.log(data.data)
                         return (
                             <RoomCard
                                 id={room_id}
