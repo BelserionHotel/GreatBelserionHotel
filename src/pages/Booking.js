@@ -283,7 +283,7 @@ function Booking(props) {
                                                             }`
                                                         );
                                                     }
-                                                });
+                                                })
                                         }}
                                     >
                                         {({
