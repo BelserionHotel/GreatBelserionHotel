@@ -27,7 +27,7 @@
     "react-phone-input-2": "^2.11.0",
     "react-phone-number-input": "^2.5.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "react-spring": "^8.0.27",
     "react-use-gesture": "^6.0.14",
     "redux": "^4.0.4",
